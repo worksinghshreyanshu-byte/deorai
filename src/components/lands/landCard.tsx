@@ -11,7 +11,7 @@ export default function LandCard({ land }: Props) {
   return (
     <Link
       href={`/lands/${land.slug}`}
-      className="group block rounded-xl overflow-hidden border border-[#e6dcd2] bg-[#f8f4ef] shadow-sm hover:shadow-lg transition-all duration-300"
+      className="group block rounded-xl overflow-hidden border border-[#D7C3AC] bg-[#F8F1E8] shadow-sm hover:shadow-lg transition-all duration-300"
     >
       <div className="relative w-full h-[260px] overflow-hidden">
         <Image
@@ -26,7 +26,7 @@ export default function LandCard({ land }: Props) {
           <h3 className="text-xl font-semibold text-[#3b2f2f]">
             {land.title}
           </h3>
-          <span className="text-sm bg-[#eadfd6] text-[#a0602c] px-3 py-1 rounded-md">
+          <span className="text-sm bg-[#F3E7D8] text-brand font-semibold px-3 py-1 rounded-md">
             {land.area}
           </span>
         </div>

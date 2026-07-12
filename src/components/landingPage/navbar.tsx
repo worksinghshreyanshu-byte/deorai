@@ -31,7 +31,7 @@ export default function Navbar() {
         
         <Link href="/">
           <div className="cursor-pointer">
-            <h1 className="text-2xl font-semibold text-[#c2410c] tracking-wide">
+            <h1 className="text-2xl font-semibold text-brand tracking-wide">
               ग्राम विरासत
             </h1>
             <p className="text-xs text-gray-500 tracking-widest">

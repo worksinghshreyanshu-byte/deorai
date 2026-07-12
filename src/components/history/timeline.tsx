@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { historyTimeline } from "@/utils/constants";
+
+import { timelineData } from "@/utils/constants";
 
 export default function HistoryTimeline() {
   return (
@@ -24,7 +24,7 @@ export default function HistoryTimeline() {
 
           <div className="absolute left-1/2 transform -translate-x-1/2 w-[2px] bg-[#D9C7B8] h-full" />
 
-          {historyTimeline.map((item, index) => {
+          {timelineData.map((item, index) => {
             const isLeft = index % 2 === 0;
 
             return (
@@ -53,17 +53,7 @@ export default function HistoryTimeline() {
                     {item.description}
                   </p>
 
-                  {item.image && (
-                    <div className="mt-5 rounded-lg overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={600}
-                        height={350}
-                        className="rounded-lg object-cover w-full h-auto"
-                      />
-                    </div>
-                  )}
+              
                 </div>
               </div>
             );

@@ -29,7 +29,7 @@ export default function Breadcrumb({
                 {item.label}
               </Link>
             ) : (
-              <span className="text-[#5b2c0f] font-medium">
+              <span className="text-brand font-semibold">
                 {item.label}
               </span>
             )}

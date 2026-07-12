@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { worksSection } from "@/utils/constants";
 import { GiOpenBook } from "react-icons/gi";
 
@@ -8,6 +9,7 @@ export default function PublishedWorksSection() {
         <h2 className="text-4xl font-serif text-[#2E1F16]">
           {worksSection.title}
         </h2>
+
         <p className="mt-2 text-[#8B6F4E] italic">
           {worksSection.subtitle}
         </p>
@@ -18,8 +20,19 @@ export default function PublishedWorksSection() {
               key={index}
               className="bg-[#E8D6C0] rounded-xl overflow-hidden shadow-sm"
             >
-              <div className="h-40 bg-[#D6BFA3] flex items-center justify-center text-5xl text-[#C49A6C]">
-              <GiOpenBook />
+              <div className="relative h-56 bg-[#D6BFA3]">
+                {work.img ? (
+                  <Image
+                    src={work.img}
+                    alt={work.title}
+                    fill
+                    className="object-fill"
+                  />
+                ) : (
+                  <div className="h-full flex items-center justify-center text-5xl text-[#C49A6C]">
+                    <GiOpenBook />
+                  </div>
+                )}
               </div>
 
               <div className="p-6 text-left">

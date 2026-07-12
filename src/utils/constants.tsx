@@ -13,13 +13,15 @@ export const menuLinks = [
 
 //About Page
 export const authorDetails: AuthorDetails = {
-  title: "The Author",
-  subtitle: "Poet · Historian · Land Custodian",
-  portraitLabel: "Author's Portrait",
+  title: "लेखक परिचय",
+  subtitle: "लेखक · पटकथा लेखक · तकनीकी विशेषज्ञ",
+  portraitLabel: "राहुल सिंह (घायल)",
   paragraphs: [
-    "Born in the shadow of the ghats of Varanasi, the author grew up listening to tales of ancestors who once walked the corridors of Mughal courts. Educated at Banaras Hindu University, they pursued a lifelong passion for literature, history, and the preservation of cultural heritage.",
-    "Their works span poetry, historical fiction, and non-fiction — all rooted in the rich soil of the Gangetic plain. Every page is an ode to the village, the ancestors, and the timeless spirit of Kashi. Through their writing, they bridge generations, turning oral traditions into enduring literature.",
-    "When not writing, the author tends to the family lands, participates in village governance, and hosts literary evenings that draw poets and scholars from across the region.",
+    "राहुल सिंह (घायल) का जन्म एवं पालन-पोषण भारत की शैक्षिक, सांस्कृतिक और ऐतिहासिक राजधानी काशी (वाराणसी) में हुआ। बचपन से ही उनकी संगीत, लेखन और नाट्य कला में गहरी रुचि रही। स्कूल और कॉलेज के वर्षों में उन्होंने कला के विभिन्न क्षेत्रों में सक्रिय रूप से सहभागिता की और अपनी सृजनात्मक प्रतिभा का निरंतर विकास किया।",
+
+    "मुंबई से कंप्यूटर में स्नातकोत्तर डिप्लोमा प्राप्त करने के बाद उन्होंने एक कंपनी में जूनियर प्रोग्रामर के रूप में अपने करियर की शुरुआत की। हालांकि, लेखन के प्रति उनका लगाव उन्हें मायानगरी से दूर नहीं रख सका। वर्ष 2007 से 2011 के बीच उन्होंने कई टेलीविज़न धारावाहिकों और फ़िल्मों के लिए लेखन कार्य किया, जिनमें ‘सुपरस्टार’ (2008) और ‘सेमशूक’ (2010) विशेष रूप से उल्लेखनीय हैं। फ़िल्म ‘सेमशूक’ के लिए उन्हें एवं उनके सह-लेखक सुदीप शर्मा को न्यूयॉर्क फ़िल्म फ़ेस्टिवल में ‘Best Writer’ श्रेणी में नामांकित किया गया। इस फ़िल्म का चयन MAMI फ़िल्म फ़ेस्टिवल, मुंबई में भी हुआ और इसका प्रदर्शन किया गया।",
+
+    "लेखन के साथ-साथ उन्होंने कंप्यूटर और प्रौद्योगिकी के क्षेत्र में भी विभिन्न कंपनियों जैसे Pay10, 1Pay, PayNearby और Atom Technologies के साथ महत्वपूर्ण पदों पर कार्य किया। वर्तमान में वे Pay10 में Global CTO के रूप में कार्यरत हैं, जहाँ वे तकनीकी नवाचार और नेतृत्व की महत्वपूर्ण जिम्मेदारियाँ निभा रहे हैं।",
   ],
 };
 
@@ -52,25 +54,26 @@ export const worksSection = {
   works: [
     {
       category: "Poetry Collection",
+      img:"/assets/author/authorBook.png",
       year: "2018",
       title: "Echoes of the Ganges",
       description:
         "A meditative anthology exploring the spiritual and cultural essence of Varanasi through verse.",
     },
-    {
-      category: "Memoir",
-      year: "2020",
-      title: "The Landlord's Diary",
-      description:
-        "A deeply personal account of growing up on ancestral lands and the responsibility of heritage.",
-    },
-    {
-      category: "Poetry",
-      year: "2023",
-      title: "Ink & Soil",
-      description:
-        "Where the poet meets the farmer — verses that celebrate the earth, the seasons, and rural wisdom.",
-    },
+    // {
+    //   category: "Memoir",
+    //   year: "2020",
+    //   title: "The Landlord's Diary",
+    //   description:
+    //     "A deeply personal account of growing up on ancestral lands and the responsibility of heritage.",
+    // },
+    // {
+    //   category: "Poetry",
+    //   year: "2023",
+    //   title: "Ink & Soil",
+    //   description:
+    //     "Where the poet meets the farmer — verses that celebrate the earth, the seasons, and rural wisdom.",
+    // },
   ],
 };
 
@@ -87,166 +90,278 @@ export interface TimelineItem {
   period: string;
   title: string;
   description: string;
-  image?: string;
 }
-
-export const historyTimeline: TimelineItem[] = [
+export const timelineData: TimelineItem[] = [
   {
     id: 1,
-    period: "Mughal Period • c. 1650",
-    title: "The Aurangzeb Connection",
+    period: "1590",
+    title: "Migration from Ayodhya",
     description:
-      "During the reign of Emperor Aurangzeb, the village lands were granted as a jagir to the ancestors of the Singh family for their valor and service. The Mughal farmans established hereditary rights over these lands.",
-    image: "/assets/history/history1.jpg",
+      "Brahmadev and Nayandev left their ancestral village Dambhua in Ayodhya and journeyed toward Kashi. They were accompanied by Dhalman Gwala.",
   },
+
   {
     id: 2,
-    period: "Late Mughal Era • c. 1720",
-    title: "Building the Foundation",
+    period: "1590",
+    title: "Marriage Alliance with Kashi",
     description:
-      "As Mughal power waned, the Singh family consolidated their holdings and began constructing permanent structures including the first haveli and village temple.",
+      "Nayandev won the hand of Princess Indumati, daughter of the King of Kashi. The king granted territory that later became known as the Dobhi region.",
   },
+
   {
     id: 3,
-    period: "The First War of Independence • c. 1857",
-    title: "Winds of Revolution",
+    period: "Late 16th Century",
+    title: "Rise of Baraichhabir",
     description:
-      "During the uprising of 1857, members of the Singh family supported freedom fighters and provided shelter to those fleeing British reprisals.",
-    image: "/assets/history/history2.jpg",
+      "Dhalman Gwala became revered as Baraichhabir. A temple was later established in his honor at Baraichha near Chandwak.",
   },
+
   {
     id: 4,
-    period: "Pre-Independence • c. 1920",
-    title: "Modernization & Reform",
+    period: "17th Century",
+    title: "Settlement of Deorai",
     description:
-      "The family embraced education and modern farming while maintaining traditional values. Irrigation canals were built and the first school was established.",
+      "Nayandev's sons Devrai and Nagairai settled in the region. The village of Deorai derived its name from Devrai.",
   },
+
   {
     id: 5,
-    period: "Independence • 1947",
-    title: "A Free India",
+    period: "17th Century",
+    title: "Expansion of Nagairai's Line",
     description:
-      "With India's independence, the family navigated land reforms while preserving the ancestral core of their estate.",
+      "Nagairai's sons Vamdev and Goanvdev established branches in Vamvaavan (Vaasvari) and Chhoti Deorai, expanding the family's influence.",
   },
+
   {
     id: 6,
-    period: "Modern Era • Present",
-    title: "Heritage & Literature",
+    period: "17th–18th Century",
+    title: "Migration to New Regions",
     description:
-      "Rahul Singh continues the family legacy not just as custodian of the lands but as a literary voice preserving stories for future generations.",
-    image: "/assets/history/history3.jpg",
+      "Descendants settled in Mohanidih and Jamsar. Later generations migrated to Chunar and Mirzapur, extending the Raghuvanshi presence.",
+  },
+
+  {
+    id: 7,
+    period: "17th Century",
+    title: "Line of Devrai",
+    description:
+      "Devrai's sons Bhuj Rai and Virahaj Rai remained in Deorai and strengthened the family's ancestral seat.",
+  },
+
+  {
+    id: 8,
+    period: "17th–18th Century",
+    title: "Branch of Virahaj Rai",
+    description:
+      "Virahaj Rai's sons included Pukaar Rai, Gelhu, Melhu and Kewatu Rai. Kewatu Rai's descendants eventually spread across twenty-four villages in present-day West Bengal.",
+  },
+
+  {
+    id: 9,
+    period: "17th–18th Century",
+    title: "Branch of Bhuj Rai",
+    description:
+      "Bhuj Rai's six sons established several important branches. Keel Rai remained in Deorai while Varmal Rai and Kuber Rai founded Varmalpur.",
+  },
+
+  {
+    id: 10,
+    period: "18th Century",
+    title: "Legacy of Narsingh Das",
+    description:
+      "Through Keval Rai's descendants emerged Narsingh Das, whose lineage expanded into numerous villages across the region.",
+  },
+
+  {
+    id: 11,
+    period: "18th Century",
+    title: "Harihar Singh's Legacy",
+    description:
+      "Harihar Singh became famous for extraordinary physical strength and spiritual devotion. Hariharpur is believed to be named after him.",
+  },
+
+  {
+    id: 12,
+    period: "18th–19th Century",
+    title: "Expansion Through Ishwardas and Ramdev",
+    description:
+      "The descendants of Ishwardas and Ramdev established family branches across dozens of villages including Narayanpur, Kusumhi, Heerapur, Khujji and others.",
+  },
+
+  {
+    id: 13,
+    period: "19th Century",
+    title: "The House of Keel Rai",
+    description:
+      "Keel Rai's sons Dhundhi Rai and Daman Singh led two influential branches. Their descendants became known for leadership, strength and social influence.",
+  },
+
+  {
+    id: 14,
+    period: "19th Century",
+    title: "Dhautal Singh's Wisdom",
+    description:
+      "Narayan Singh's son Dhautal Singh earned recognition for wisdom, foresight and sound judgment, becoming one of the most respected figures in the lineage.",
+  },
+
+  {
+    id: 15,
+    period: "19th Century",
+    title: "Valor of Jagatu Singh",
+    description:
+      "Jagatu Singh and his cousin Sannu Singh became celebrated in family tradition for bravery and military success.",
+  },
+
+  {
+    id: 16,
+    period: "Late 19th Century",
+    title: "Continuation Through Vishveshwar Singh",
+    description:
+      "Among Jagatu Singh's sons, only Vishveshwar Singh carried the direct lineage forward through his son Tulsi Singh.",
+  },
+
+  {
+    id: 17,
+    period: "Early 20th Century",
+    title: "Tulsi Singh's Generation",
+    description:
+      "Tulsi Singh had three sons—Ram Niranjan, Gurucharan (Bhagwati Charan Singh), and Bhagwatideen Singh. The main lineage continued through Ram Niranjan.",
+  },
+
+  {
+    id: 18,
+    period: "Indian Freedom Movement",
+    title: "Kashinath Singh",
+    description:
+      "Kashinath Singh, son of Ram Niranjan, became a scholar, Gandhian and freedom fighter. He actively participated in India's independence movement despite family opposition.",
+  },
+
+  {
+    id: 19,
+    period: "Modern Era",
+    title: "The Next Generation",
+    description:
+      "Kashinath Singh and Shyama Devi were blessed with three sons: Dr. Rudra Pratap Singh, Raghvendra Pratap Singh and Jagdish Pratap Singh.",
   },
 ];
-
 //Family tree
-export interface FamilyMember {
-  id: string;
-  name: string;
-  highlight?: boolean;
-  children?: FamilyMember[];
-}
 
-export const familyTree: FamilyMember = {
-  id: "root",
-  name: "Raghuvanshi Vanshavali - Deorai",
-  children: [
+export const familyData = {
+  title: "Raghuvanshi Vanshavali - Deorai",
+  rootGeneration: [
+    { name: "Bramhadev" },
     {
-      id: "bramhadev",
-      name: "Bramhadev",
+      name: "Nayandev",
       children: [
         {
-          id: "deorai",
-          name: "Deorai",
+          name: "Devrai",
           children: [
             {
-              id: "bhujrai",
               name: "Bhujrai",
               children: [
                 {
-                  id: "dhundhiraj",
-                  name: "Dhundhiraj",
+                  name: "Keelrai",
                   children: [
                     {
-                      id: "narayan",
-                      name: "Narayan Singh",
-                    },
-                    {
-                      id: "gurubakhsha",
-                      name: "Gurubakhsha Singh",
-                    },
-                    {
-                      id: "shivbakhsha",
-                      name: "Shivbakhsha Singh",
-                    },
-                  ],
+                      name: "Dhundhirai",
+                      children: [
+                        {
+                          name: "Narayan Singh",
+                          children: [
+                            {
+                              name: "Dhautal Singh",
+                              children: [
+                                {
+                                  name: "Jagatu Singh",
+                                  children: [
+                                    { name: "Vishweshvar Singh" },
+                                    {
+                                      name: "Lal Bahadur Singh",
+                                      children: [
+                                        {
+                                          name: "Tulsi Singh",
+                                          children: [
+                                            { name: "Ram Niranjan" },
+                                            {
+                                              name: "Gurucharan Singh",
+                                              children: [
+                                                {
+                                                  name: "Kashinath Singh",
+                                                  children: [
+                                                    {
+                                                      name: "Rudra Pratap Singh",
+                                                      children: [
+                                                        { name: "Anshuman Singh" },
+                                                        { name: "Ashutosh Singh" },
+                                                        { name: "Rahul Singh" }
+                                                      ]
+                                                    },
+                                                    {
+                                                      name: "Raghavendra Pratap Singh",
+                                                      children: [
+                                                        { name: "Prashant Singh" },
+                                                        { name: "Rohit Singh" }
+                                                      ]
+                                                    },
+                                                    {
+                                                      name: "Jagdish Pratap Singh",
+                                                      children: [
+                                                        { name: "Manish Singh" },
+                                                        { name: "Gaurav Singh" }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            { name: "Bhagawati Charan Singh" }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    { name: "Manglu Singh" }
+                                  ]
+                                },
+                                { name: "Bhagatu Singh" }
+                              ]
+                            }
+                          ]
+                        },
+                        { name: "Gurubakhsha Singh" },
+                        { name: "Shivbakhsha Singh" }
+                      ]
+                    }
+                  ]
                 },
-              ],
-            },
-          ],
+                { name: "Randheerrai" },
+                { name: "Vermalrai" },
+                { name: "Kuberrai" },
+                { name: "Kevalrai" },
+                { name: "Thakurai" }
+              ]
+            }
+          ]
         },
-      ],
-    },
-
-    {
-      id: "dhawal",
-      name: "Dhawal Singh",
-      children: [
         {
-          id: "jagatu",
-          name: "Jagatu Singh",
+          name: "Nagairai",
           children: [
             {
-              id: "vishweshwar",
-              name: "Vishweshwar Singh",
-            },
-            {
-              id: "lalbahadur",
-              name: "Lal Bahadur Singh",
-            },
-            {
-              id: "manglu",
-              name: "Manglu Singh",
-            },
-          ],
-        },
-      ],
+              name: "Virhajrai",
+              children: [
+                { name: "Pukarrai" },
+                { name: "Gelhu" },
+                { name: "Melhu" },
+                { name: "Kevaturai" }
+              ]
+            }
+          ]
+        }
+      ]
     },
-
-    {
-      id: "kashinath",
-      name: "Kashinath Singh",
-      children: [
-        {
-          id: "rudra",
-          name: "Rudra Pratap Singh",
-          highlight: true,
-          children: [
-            { id: "anshuman", name: "Anshuman Singh" },
-            { id: "ashutosh", name: "Ashutosh Singh" },
-            { id: "rahul", name: "Rahul Singh" },
-          ],
-        },
-        {
-          id: "raghavendra",
-          name: "Raghavendra Pratap Singh",
-          children: [
-            { id: "prashant", name: "Prashant Singh" },
-            { id: "rohit", name: "Rohit Singh" },
-          ],
-        },
-        {
-          id: "jagdish",
-          name: "Jagdish Pratap Singh",
-          children: [
-            { id: "manish", name: "Manish Singh" },
-            { id: "gaurav", name: "Gaurav Singh" },
-          ],
-        },
-      ],
-    },
-  ],
+    { name: "Dhalman Gwala" },
+    { name: "Daman Singh" }
+  ]
 };
-
 //Events Page
 export interface EventItem {
   id: number;
@@ -310,67 +425,668 @@ export const events: EventItem[] = [
 ];
 
 //Regional Info
-export interface RegionalCard {
-  id: number;
-  title: string;
-  description: string;
-  icon: string; // icon name reference
-}
 
-export const regionalOverviewData: RegionalCard[] = [
+export const villageData = {
+  name: "Deorai",
+  localName: "देोरई",
+  alternateName: "Devrai",
+
+  location: {
+    block: "Kerakat",
+    district: "Jaunpur",
+    state: "Uttar Pradesh",
+    division: "Varanasi",
+    country: "India",
+  },
+
+  language: ["Hindi", "Urdu"],
+
+  geography: {
+    elevation: {
+      value: 83,
+      unit: "meters",
+      description: "Above Sea Level",
+    },
+    rivers: [
+      "Sai River",
+      "Barwa Nadi",
+    ],
+  },
+
+  transport: {
+    nationalHighways: [
+      "NH135A",
+    ],
+  },
+
+  postal: {
+    pinCode: "222129",
+    stdCode: "05450",
+    postOffice: "Chandwak",
+  },
+
+  administration: {
+    assemblyConstituency: "Kerakat",
+    mla: "Tufani Saroj",
+    lokSabhaConstituency: "Machhlishahr",
+    mp: "Priya Saroj",
+    serpanch: null,
+  },
+
+  market: {
+    commodities: "Varanasi (F&V) Market / Mandi",
+  },
+
+  weather: {
+    current: {
+      temperature: "35.9°C",
+      condition: "Scattered Clouds",
+      humidity: "42%",
+      wind: "5.59 m/s (West)",
+      station: "RahuaNAlu0081thpur",
+      observed: "2 hours ago",
+    },
+
+    forecast: [
+      {
+        date: "2026-07-13",
+        temperature: {
+          min: 31.8,
+          max: 38.4,
+        },
+        conditions: [
+          "Few Clouds",
+          "Scattered Clouds",
+          "Broken Clouds",
+          "Overcast Clouds",
+        ],
+      },
+      {
+        date: "2026-07-14",
+        temperature: {
+          min: 31.3,
+          max: 42.3,
+        },
+        conditions: [
+          "Light Rain",
+          "Overcast Clouds",
+          "Broken Clouds",
+        ],
+      },
+      {
+        date: "2026-07-15",
+        temperature: {
+          min: 28.3,
+          max: 37.2,
+        },
+        conditions: ["Overcast Clouds", "Light Rain"],
+      },
+      {
+        date: "2026-07-16",
+        temperature: {
+          min: 28.4,
+          max: 30.6,
+        },
+        conditions: ["Overcast Clouds", "Broken Clouds"],
+      },
+      {
+        date: "2026-07-17",
+        temperature: {
+          min: 30.0,
+          max: 42.1,
+        },
+        conditions: [
+          "Overcast Clouds",
+          "Broken Clouds",
+          "Light Rain",
+        ],
+      },
+    ],
+  },
+};
+
+export const villageOverview = {
+  description:
+    "Deorai is a village in Kerakat Block of Jaunpur district, Uttar Pradesh, India. It belongs to the Varanasi Division and is located 41 km east of the district headquarters, Jaunpur, 13 km from Kerakat, and approximately 290 km from the state capital, Lucknow.",
+
+  postal: {
+    pinCode: "222129",
+    headPostOffice: "Chandwak",
+  },
+
+  nearbyVillages: [
+    {
+      name: "Bhainsa",
+      distanceKm: 3,
+    },
+    {
+      name: "Bantari",
+      distanceKm: 3,
+    },
+    {
+      name: "Umarwar",
+      distanceKm: 4,
+    },
+    {
+      name: "Ratnupur",
+      distanceKm: 4,
+    },
+    {
+      name: "Shivram Pur Khurd",
+      distanceKm: 4,
+    },
+  ],
+
+  surroundingBlocks: {
+    north: "Dobhi Block",
+    west: "Pindra Block",
+    south: "Haraua Block",
+  },
+
+  nearestCities: [
+    "Saidpur",
+    "Ghazipur",
+    "Varanasi",
+    "Jaunpur",
+    "Mau",
+  ],
+
+  districtBorders: {
+    onBorderOf: [
+      "Jaunpur District",
+      "Varanasi District",
+    ],
+    neighboringDistrict: "Azamgarh",
+  },
+};
+
+export const pollingStations = [
+  "PS Bagerwa",
+  "PS Devrai North Side",
+  "PS Bansbari West Side",
+  "PS Parihar Chavani",
+  "PS Baraich",
+];
+
+export const transportation = {
+  rail: {
+    nearestStation: "Dobhi Railway Station",
+    description: "Dobhi Railway Station is the nearest railway station to Deorai.",
+  },
+};
+
+export const nearbyColleges = [
   {
-    id: 1,
-    title: "District & Location",
-    description:
-      "Situated in the Varanasi district of Uttar Pradesh, the village lies approximately 25 km from the city center, connected by state highways and rural roads winding through lush green countryside.",
-    icon: "map",
+    name: "Shri Krishna Sanskrit Secondary School Jaigopalganj",
+    address: "",
   },
   {
-    id: 2,
-    title: "Administrative Division",
-    description:
-      "Falls under the Pindra tehsil, within the jurisdiction of the Varanasi Division. The village panchayat oversees local governance with deep community involvement.",
-    icon: "building",
+    name: "Shri Ganesh Raj PG College, Dobhi",
+    address: "",
   },
   {
-    id: 3,
-    title: "River & Water Bodies",
-    description:
-      "The sacred Ganges flows nearby, with several village ponds (pokhras) that serve as communal gathering spots, irrigation sources, and habitats for native wildlife.",
-    icon: "waves",
+    name: "Public Inter College",
+    address: "",
   },
   {
-    id: 4,
-    title: "Geography & Climate",
-    description:
-      "The Gangetic plain offers flat, fertile terrain with hot summers, monsoon rains, and mild winters. The alluvial soil supports rich agricultural output year-round.",
-    icon: "mountain",
+    name: "Vbspu Ratnupur",
+    address: "",
   },
   {
-    id: 5,
-    title: "Educational Institutions",
-    description:
-      "The region hosts several primary and secondary schools, with Banaras Hindu University — one of Asia's largest residential universities — within accessible distance.",
-    icon: "book",
-  },
-  {
-    id: 6,
-    title: "Local Cuisine & Culture",
-    description:
-      "Famous for Banarasi paan, kachori-sabzi, lassi, and the iconic Banarasi silk weaving tradition that has been a UNESCO-recognized craft for centuries.",
-    icon: "food",
+    name: "Kaushilya College, Balua Chandwak, Jaunpur",
+    address: "Balua Baraich, Chandwak",
   },
 ];
 
-export const nearbyLandmarks = [
-  "Kashi Vishwanath Temple",
-  "Dashashwamedh Ghat",
-  "Sarnath (Buddhist pilgrimage)",
-  "Ramnagar Fort",
-  "Banaras Hindu University",
-  "Chunar Fort",
+export const schools = [
+  {
+    name: "UPS Devrai",
+    address:
+      "Devrai, Kerakat, Jaunpur, Uttar Pradesh - 222129, Post - Chandwak",
+  },
 ];
 
+export const nearbyHealthCenters = [
+  {
+    name: "BARICHHA",
+    village: "Barichha",
+  },
+  {
+    name: "Sindhora",
+    village: "Sindhora",
+  },
+  {
+    name: "Basantpur",
+    village: "Basantpur",
+  },
+];
+
+export const census2011 = {
+  year: 2011,
+
+  population: {
+    total: 1763,
+    houses: 277,
+    femalePercentage: 49.5,
+    femalePopulation: 873,
+  },
+
+  literacy: {
+    totalRate: 63.4,
+    literates: 1118,
+    femaleRate: 27.6,
+    femaleLiterates: 487,
+  },
+
+  demographics: {
+    scheduledTribes: {
+      percentage: 0.0,
+      population: 0,
+    },
+    scheduledCastes: {
+      percentage: 46.0,
+      population: 811,
+    },
+    workingPopulationPercentage: 28.1,
+    childrenAge0To6: {
+      total: 246,
+      girlsPercentage: 45.9,
+      girlsPopulation: 113,
+    },
+  },
+};
+
+export const villagePolitics = {
+  majorPoliticalParties: [
+    "BJP",
+    "SP",
+    "BSP",
+  ],
+};
+export const subVillages = [
+  "Devrai (Hb1)",
+  "Devrai (Mb)",
+  "Devrai (Hb2)",
+  "Devrai (Hb4)",
+  "Devrai (M)",
+  "Devrai (Yb2)",
+  "Devrai (Yb1)",
+  "Devrai (Hb3)",
+];
+
+export const nearbyBusStops = [
+  {
+    name: "Sindhora Bus Stop",
+    address:
+      "Garakhara - Sindhora Road, Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.4,
+  },
+  {
+    name: "Garakhara Bus Stop",
+    address:
+      "Garakhara - Sindhora Road, Garakhara, Uttar Pradesh 221110, India",
+    distanceKm: 5.7,
+  },
+  {
+    name: "Garakhara Bus Stop",
+    address:
+      "Garakhara - Thanagaddi Road, Uttar Pradesh 222181, India",
+    distanceKm: 6.8,
+  },
+  {
+    name: "Thanagaddi Bus Stop",
+    address:
+      "Garakhara - Thanagaddi Road, Police Station, Uttar Pradesh 222181, India",
+    distanceKm: 10.0,
+  },
+];
+
+export const nearbyAtms = [
+  {
+    name: "ICICI ATM",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.2,
+  },
+  {
+    name: "India No. 1 ATM",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.4,
+  },
+  {
+    name: "Union Bank ATM",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.5,
+  },
+  {
+    name: "HDFC ATM",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.5,
+  },
+];
+
+export const nearbyCinemaTheatres = [
+  {
+    name: "SAHANI MIXING LAB",
+    address: "Bhawanipur, Uttar Pradesh 221101, India",
+    distanceKm: 8.2,
+  },
+  {
+    name: "Bhadwan Danjung Varanasi",
+    address: "Bhadwan, Uttar Pradesh 221101, India",
+    distanceKm: 8.4,
+  },
+  {
+    name: "Kerakat Cinema Hall",
+    address: "Dalal Tola, Abdulapur, Uttar Pradesh 222142, India",
+    distanceKm: 13.7,
+  },
+  {
+    name: "DSV Entertainment (P) Ltd",
+    address: "Lodhan, Uttar Pradesh 221003, India",
+    distanceKm: 21.3,
+  },
+];
+
+export const nearbyTemples = [
+  {
+    name: "Temple",
+    address: "Deorai, Uttar Pradesh 222129, India",
+    distanceKm: 0.3,
+  },
+  {
+    name: "Bhagat Sukhram Yadav",
+    address: "Deorai, Uttar Pradesh 222129, India",
+    distanceKm: 0.3,
+  },
+  {
+    name: "Durga Mata Temple Barahimpur (Late Baba Vishwanath Yadav)",
+    address: "Barahimpur, Uttar Pradesh 222129, India",
+    distanceKm: 0.5,
+  },
+  {
+    name: "Om Shri Shiv Ji Temple Rupchandrapur",
+    address: "Roop Chandpur, Uttar Pradesh 221208, India",
+    distanceKm: 1.8,
+  },
+];
+
+export const nearbyMosques = [
+  {
+    name: "Rupchandrapur Mosque",
+    address: "Mohanidih, Uttar Pradesh 221208, India",
+    distanceKm: 1.8,
+  },
+  {
+    name: "Aatala Masjib",
+    address: "Jaunpur, Uttar Pradesh 222129, India",
+    distanceKm: 8.5,
+  },
+  {
+    name: "Unnamed Mosque",
+    address: "Devnath Pur, Uttar Pradesh 222181, India",
+    distanceKm: 10.1,
+  },
+];
+
+export const nearbyHotelsAndLodges = [
+  {
+    name: "Guru Prasad Egg",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.1,
+  },
+  {
+    name: "Kishna Gao Sindoraaa",
+    address:
+      "Garakhara - Sindhora Road, Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.5,
+  },
+  {
+    name: "Babu Devidutt Singh Villa",
+    address: "Bhainsa, Taluka Kerakat, Uttar Pradesh 222129, India",
+    distanceKm: 4.0,
+  },
+  {
+    name: "Pandey Niwas Bansipura",
+    address: "Bhainsa, Uttar Pradesh 222129, India",
+    distanceKm: 4.8,
+  },
+  {
+    name: "yadav.sweet shop",
+    address: "Ratanpur, Mahuli, Uttar Pradesh, India",
+    distanceKm: 5.0,
+  },
+];
+
+export const nearbyRestaurants = [
+  {
+    name: "GULRA",
+    address: "Varanasi, Uttar Pradesh, India",
+    distanceKm: 1.0,
+  },
+  {
+    name: "Lav Kush Fast Food Chat Corner",
+    address:
+      "Sindhora - Garthama Road, Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 2.8,
+  },
+  {
+    name: "Vishal Chinese Fast Food",
+    address:
+      "Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 3.4,
+  },
+  {
+    name: "Harinath Tomato Chat Bhandar",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.4,
+  },
+  {
+    name: "Banarasi Pakode Wale",
+    address:
+      "Garakhara - Sindhora Road, Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.5,
+  },
+];
+
+export const nearbyHospitals = [
+  {
+    name: "Government Hospital",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 2.7,
+  },
+  {
+    name: "Pratigya Hospital",
+    address: "Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 2.7,
+  },
+  {
+    name: "Shiv Shadhana Hospital",
+    address:
+      "Sindhora, T Road, Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.1,
+  },
+  {
+    name: "Jivan Jyoti Pali Clinic",
+    address: "Caste, Uttar Pradesh 221208, India",
+    distanceKm: 3.3,
+  },
+];
+
+export const nearbyPetrolPumps = [
+  {
+    name: "Indian Oil Petrol Pump",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.3,
+  },
+  {
+    name: "HP Petrol Pump - Aditya Filling Station",
+    address:
+      "Sarai Sheikh Lord PO BZR DT Varanasi UP, Sindhora, Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 5.2,
+  },
+  {
+    name: "Indian Oil Petrol Pump",
+    address: "Dehri, Uttar Pradesh 221101, India",
+    distanceKm: 5.4,
+  },
+  {
+    name: "Petrol Pump",
+    address: "Sarai Shekhla, Uttar Pradesh 221208, India",
+    distanceKm: 5.6,
+  },
+];
+
+export const colleges = [
+  {
+    name: "Gaurav College",
+    address: "Devrai, Danganj, Varanasi, Uttar Pradesh 222129, India",
+    distanceKm: 2.6,
+  },
+  {
+    name: "Shiv Shakti Polytechnic",
+    address:
+      "Shree Ram Katara, Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 3.3,
+  },
+  {
+    name: "Shiv Shakti Mahila Polytechnic",
+    address:
+      "Shree Ram Katara, Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 3.3,
+  },
+  {
+    name: "Om Sai Computer Institute",
+    address:
+      "Near Swati Pali Clinic, Basantpur, Sindhora, District Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 3.6,
+  },
+];
+
+export const schoolsNearby = [
+  {
+    name: "Barahimpur School",
+    address: "Jaunpur, Uttar Pradesh 222129, India",
+    distanceKm: 0.7,
+  },
+  {
+    name: "Parapati School",
+    address: "Parapati, Uttar Pradesh 222129, India",
+    distanceKm: 0.8,
+  },
+  {
+    name: "Pt. RamSurat Inter College, Punchandrapur, Varanasi",
+    address: "Mohanidih, Uttar Pradesh 222129, India",
+    distanceKm: 1.2,
+  },
+  {
+    name: "PS Mohani Deeh",
+    address: "Mohanidih, Uttar Pradesh 222129, India",
+    distanceKm: 1.5,
+  },
+  {
+    name: "Mohanidih School",
+    address: "Mohanidih, Uttar Pradesh 221101, India",
+    distanceKm: 1.5,
+  },
+];
+
+export const electronicShops = [
+  {
+    name: "MOHAN MOBILE COMMUNICATION",
+    address: "Mohanidih, Uttar Pradesh 222129, India",
+    distanceKm: 1.5,
+  },
+  {
+    name: "Bharat Electronics",
+    address:
+      "Sindhora Road, Orderly Market, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.1,
+  },
+  {
+    name: "Pramod Electronics",
+    address:
+      "Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 3.2,
+  },
+];
+
+export const supermarkets = [
+  {
+    name: "Khojjan Bangle Shop",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.3,
+  },
+  {
+    name: "Sai Jane's Parlor",
+    address:
+      "Garakhara - Sindhora Road, Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.4,
+  },
+  {
+    name: "Mahadev Welding Works And Furniture Shop",
+    address: "Sindhora, Basantpura, Uttar Pradesh 221208, India",
+    distanceKm: 3.5,
+  },
+];
+
+export const localParks = [
+  {
+    name: "Singh Sahib's Garden",
+    address: "Laharpur, Danganj, Uttar Pradesh 221101, India",
+    distanceKm: 5.5,
+  },
+  {
+    name: "Ashok Vatika Bagerwan Village",
+    address: "Bagerwan, Uttar Pradesh 222129, India",
+    distanceKm: 8.5,
+  },
+  {
+    name: "Dr. BR Ambedkar Park",
+    address: "Nadoy, Uttar Pradesh 221206, India",
+    distanceKm: 11.6,
+  },
+];
+
+export const nearbyPoliceStations = [
+  {
+    name: "Cholapur Police Station",
+    address:
+      "NH-233, Azamgarh–Varanasi Road, Cholapur, Uttar Pradesh 221101, India",
+    distanceKm: 9.9,
+  },
+  {
+    name: "Thanagaddi Police Station",
+    address: "Police Station, Uttar Pradesh 222181, India",
+    distanceKm: 10.7,
+  },
+  {
+    name: "Kerakat Police Station",
+    address: "Market, Kerakat, Uttar Pradesh 222142, India",
+    distanceKm: 14.0,
+  },
+];
+
+export const nearbyGovernmentOffices = [
+  {
+    name: "Police Station",
+    address: "Varanasi, Uttar Pradesh 221208, India",
+    distanceKm: 3.3,
+  },
+  {
+    name: "Panchayat Bhawan Basantpur",
+    address: "Basantpur, Uttar Pradesh 221110, India",
+    distanceKm: 4.5,
+  },
+  {
+    name: "Election Building",
+    address:
+      "Cholapur, NH-233, Varanasi–Azamgarh Road, Varanasi, Uttar Pradesh 221101, India",
+    distanceKm: 4.9,
+  },
+];
+
+
+//Land
 
 export interface Land {
   id: string;

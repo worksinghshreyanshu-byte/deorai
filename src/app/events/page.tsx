@@ -3,7 +3,7 @@ import HeroSection from "@/components/general/heroSection";
 
 function page() {
   return (
-    <div className="bg-[#F5EFE6]">
+    <div className="">
       <HeroSection
         label="UPCOMING"
         title="Events & Celebrations"

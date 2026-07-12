@@ -1,12 +1,13 @@
-// import FamilyTree from "@/components/vanshawali/familyTree"
 
+
+import FamilyTreeUI from "@/components/vanshawali/familyTree";
 
 function page() {
   return (
     <div>
-        {/* <FamilyTree/> */}
-        </div>
-  )
+      <FamilyTreeUI />
+    </div>
+  );
 }
 
-export default page
+export default page;

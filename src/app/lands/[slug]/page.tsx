@@ -3,7 +3,7 @@ import Image from "next/image";
 import { lands } from "@/utils/constants";
 import Breadcrumb from "@/components/general/breadCrumb";
 import LandGallery from "@/components/lands/landGallery";
-
+import SectionHeader from "@/components/general/sectionHeader";
 
 interface PageProps {
   params: {
@@ -30,26 +30,20 @@ export default async function LandDetailsPage({ params }: PageProps) {
         />
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-serif text-[#5b2c0f] leading-tight">
-              {land.title}
-            </h1>
-
-            <p className="mt-5 text-gray-600 italic max-w-2xl">
-              {land.description}
-            </p>
-          </div>
-
+          <SectionHeader
+            align="left"
+            eyebrow="Village Lands"
+            title={land.title}
+            subtitle={land.description}
+            className="mb-4"
+          />
           <div className="flex md:justify-end">
-            <div className="inline-flex items-center gap-2 bg-[#efe4d8] text-[#5b2c0f] px-6 py-3 rounded-full shadow-sm border border-[#e2d6c8]">
-              <span className="text-base font-semibold">
-                {land.area}
-              </span>
+            <div className="inline-flex items-center gap-2 bg-[#efe4d8] text-brand px-6 py-1.5 rounded-xl shadow-sm border border-[#e2d6c8]">
+              <span className="text-base font-semibold">{land.area}</span>
             </div>
           </div>
         </div>
-
-        <div className="relative w-full h-[450px] mt-14 rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative w-full h-[450px] mt-6 rounded-2xl overflow-hidden shadow-lg">
           <Image
             src={land.image}
             alt={land.title}
@@ -58,7 +52,6 @@ export default async function LandDetailsPage({ params }: PageProps) {
             priority
           />
         </div>
-
         <div className="max-w-6xl mx-auto my-10">
           <h2 className="text-2xl font-serif text-[#5b2c0f] mb-6">
             The Story of This Land
@@ -69,7 +62,6 @@ export default async function LandDetailsPage({ params }: PageProps) {
           </p>
         </div>
 
-   
         <LandGallery images={land.gallery} title={land.title} />
       </section>
     </div>
