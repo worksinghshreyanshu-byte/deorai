@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { worksSection } from "@/utils/constants";
 import { GiOpenBook } from "react-icons/gi";
+import Link from "next/link";
 
 export default function PublishedWorksSection() {
   return (
-    <section className="bg-[#F5EFE6] py-24 px-6">
+    <section className=" py-24 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-serif text-[#2E1F16]">
           {worksSection.title}
@@ -16,9 +17,10 @@ export default function PublishedWorksSection() {
 
         <div className="grid md:grid-cols-3 gap-10 mt-16">
           {worksSection.works.map((work, index) => (
-            <div
+            <Link
+            href="/about/poem"
               key={index}
-              className="bg-[#E8D6C0] rounded-xl overflow-hidden shadow-sm"
+              className="bg-[#E8D6C0] rounded-xl cursor-pointer overflow-hidden shadow-sm"
             >
               <div className="relative h-56 bg-[#D6BFA3]">
                 {work.img ? (
@@ -48,7 +50,7 @@ export default function PublishedWorksSection() {
                   {work.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

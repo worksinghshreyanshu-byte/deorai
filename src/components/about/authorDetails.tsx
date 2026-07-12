@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export default function AuthorSection() {
   return (
-    <section className="bg-[#F5EFE6] py-20">
+    <section className="pb-20 pt-10">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
         <div className="border border-[#E0C9A6] rounded-xl bg-[#F8F1E8] overflow-hidden">
-          <div className="relative w-full h-[520px]">
+          <div className="relative w-full h-[560px]">
             <Image
-              src="/assets/author/author.jpg"
+              src="https://res.cloudinary.com/oenn8x6i/image/upload/v1783863574/author_er0g3m.jpg"
               alt={authorDetails.portraitLabel}
               fill
-              className="object-cover"
+              className="object-fill"
               priority
             />
           </div>

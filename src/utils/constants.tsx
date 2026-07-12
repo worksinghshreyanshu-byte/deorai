@@ -1,14 +1,12 @@
 import { AuthorDetails } from "./interface";
 
 export const menuLinks = [
-  { label: "Home", href: "/" },
   { label: "Regional Info", href: "/regional-info" },
   { label: "Events", href: "/events" },
   { label: "Lands", href: "/lands" },
   { label: "Vanshawali", href: "/vanshawali" },
   { label: "History & Ancestors", href: "/history" },
   { label: "About the Author", href: "/about" },
-  
 ];
 
 //About Page
@@ -30,20 +28,37 @@ export const wordsSection = {
   subtitle: "Selected verses by Rahul Singh",
   quotes: [
     {
-      text: "In every grain of this soil sleeps a verse, waiting for the poet who knows how to listen.",
-      author: "Rahul Singh",
+      text: `आसमान से ऊँची थी रंजिशें,
+घरों में तो कुछ कदम के फासले थे !!
+कहीं पाँव में थी बंदिशें,
+तो कहीं रास्तों के सीनों पे भी छाले थे !!`,
+      author: `राहुल सिंह`,
     },
     {
-      text: "Heritage is not what we inherit — it is what we choose to remember and retell.",
-      author: "Rahul Singh",
+      text: `बुझते दियों के उजालो सा,
+गर्दिश में गुजरे सालों सा,
+बारिश में ढहे मकानों सा,
+दूर के अजानो सा,
+वो मैं या मेरा अक्स था या कोई और शख्स था!`,
+      author: `राहुल सिंह`,
     },
     {
-      text: "The Ganges does not flow — it narrates, in a language older than memory.",
-      author: "Rahul Singh",
+      text: `जब खेत छोड़ने लगे हो खाल,
+हो मीन से हीन भी पोखर ताल,
+घर से विलुप्त हो सीता-गीता,
+हो  धुत्त  नशे में पुत्र-पिता,
+मिलें दूध दही बस किस्सों' में,
+घर बिखर गए हो हिस्सो में,
+हो खारा जल धरातल में,
+तो समझो गांव रसातल में!!`,
+      author: `राहुल सिंह`,
     },
     {
-      text: "My pen is a plough, and every poem a furrow sown with the seeds of the past.",
-      author: "Rahul Singh",
+      text: `मुनासिब न होगा अब इस हवा में सांस लेना,
+सरफिरे बारूदों ने मरघट सारा शहर कर दिया!!
+देख रोते किसी को कभी हंसना न 'घायल',
+आंसुओं ने नजाने कितने शहर समंदर कर दिया!!`,
+      author: `राहुल सिंह`,
     },
   ],
 };
@@ -54,34 +69,38 @@ export const worksSection = {
   works: [
     {
       category: "Poetry Collection",
-      img:"/assets/author/authorBook.png",
+      img: "https://res.cloudinary.com/oenn8x6i/image/upload/v1783872182/authorBook_yy9qhc.png",
       year: "2018",
-      title: "Echoes of the Ganges",
+      title: "थोड़े शब्द लगभग में",
+      slug: "thode-shabd-lagbhag-me",
       description:
         "A meditative anthology exploring the spiritual and cultural essence of Varanasi through verse.",
     },
-    // {
-    //   category: "Memoir",
-    //   year: "2020",
-    //   title: "The Landlord's Diary",
-    //   description:
-    //     "A deeply personal account of growing up on ancestral lands and the responsibility of heritage.",
-    // },
-    // {
-    //   category: "Poetry",
-    //   year: "2023",
-    //   title: "Ink & Soil",
-    //   description:
-    //     "Where the poet meets the farmer — verses that celebrate the earth, the seasons, and rural wisdom.",
-    // },
   ],
 };
 
-export const missionSection = {
-  title: "The Poet's Mission",
-  quote:
-    "I believe that every village has a voice, every field has a verse, and every generation has a duty to record the melody of its time. My writing is not just art — it is an act of preservation, a bridge between the ancestors who shaped this land and the children who will inherit it.",
-  citation: "Rahul Singh, in an interview with Sahitya Akademi, 2024",
+export const memorialSection = {
+  title: "Remembering",
+
+  dedication: "पूज्य चाचाजी",
+
+  person: "श्री जगदीश प्रताप सिंह",
+
+  lifespan: "१९५०–२०२४",
+
+  verses: [
+    `साथियों से संग खेलते ही बचपन बीता,
+लगा घर घरौना और खिलौना बस सत्य है।`,
+
+    `हुआ जो जवान तो जहान तरुणी में दिखा,
+तरुणी के देह का बिछौना लगा सत्य है।`,
+
+    `हुआ जब बाप चार पुत्र और पुत्रों का,
+धन धान्य धरा का कामना दिखा सत्य है।`,
+
+    `सोचा जब बात परलोक को सवारने की,
+लगा सब असत्य बस राम नाम सत्य है!!`,
+  ],
 };
 
 //History Page
@@ -121,7 +140,7 @@ export const timelineData: TimelineItem[] = [
     period: "17th Century",
     title: "Settlement of Deorai",
     description:
-      "Nayandev's sons Devrai and Nagairai settled in the region. The village of Deorai derived its name from Devrai.",
+      "Nayandev's sons Deorai and Nagairai settled in the region. The village of Deorai derived its name from Deorai.",
   },
 
   {
@@ -143,7 +162,7 @@ export const timelineData: TimelineItem[] = [
   {
     id: 7,
     period: "17th Century",
-    title: "Line of Devrai",
+    title: "Line of Deorai",
     description:
       "Devrai's sons Bhuj Rai and Virahaj Rai remained in Deorai and strengthened the family's ancestral seat.",
   },
@@ -291,56 +310,66 @@ export const familyData = {
                                                     {
                                                       name: "Rudra Pratap Singh",
                                                       children: [
-                                                        { name: "Anshuman Singh" },
-                                                        { name: "Ashutosh Singh" },
-                                                        { name: "Rahul Singh" }
-                                                      ]
+                                                        {
+                                                          name: "Anshuman Singh",
+                                                        },
+                                                        {
+                                                          name: "Ashutosh Singh",
+                                                        },
+                                                        { name: "Rahul Singh" },
+                                                      ],
                                                     },
                                                     {
                                                       name: "Raghavendra Pratap Singh",
                                                       children: [
-                                                        { name: "Prashant Singh" },
-                                                        { name: "Rohit Singh" }
-                                                      ]
+                                                        {
+                                                          name: "Prashant Singh",
+                                                        },
+                                                        { name: "Rohit Singh" },
+                                                      ],
                                                     },
                                                     {
                                                       name: "Jagdish Pratap Singh",
                                                       children: [
-                                                        { name: "Manish Singh" },
-                                                        { name: "Gaurav Singh" }
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
+                                                        {
+                                                          name: "Manish Singh",
+                                                        },
+                                                        {
+                                                          name: "Gaurav Singh",
+                                                        },
+                                                      ],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
                                             },
-                                            { name: "Bhagawati Charan Singh" }
-                                          ]
-                                        }
-                                      ]
+                                            { name: "Bhagawati Charan Singh" },
+                                          ],
+                                        },
+                                      ],
                                     },
-                                    { name: "Manglu Singh" }
-                                  ]
+                                    { name: "Manglu Singh" },
+                                  ],
                                 },
-                                { name: "Bhagatu Singh" }
-                              ]
-                            }
-                          ]
+                                { name: "Bhagatu Singh" },
+                              ],
+                            },
+                          ],
                         },
                         { name: "Gurubakhsha Singh" },
-                        { name: "Shivbakhsha Singh" }
-                      ]
-                    }
-                  ]
+                        { name: "Shivbakhsha Singh" },
+                      ],
+                    },
+                  ],
                 },
                 { name: "Randheerrai" },
                 { name: "Vermalrai" },
                 { name: "Kuberrai" },
                 { name: "Kevalrai" },
-                { name: "Thakurai" }
-              ]
-            }
-          ]
+                { name: "Thakurai" },
+              ],
+            },
+          ],
         },
         {
           name: "Nagairai",
@@ -351,16 +380,16 @@ export const familyData = {
                 { name: "Pukarrai" },
                 { name: "Gelhu" },
                 { name: "Melhu" },
-                { name: "Kevaturai" }
-              ]
-            }
-          ]
-        }
-      ]
+                { name: "Kevaturai" },
+              ],
+            },
+          ],
+        },
+      ],
     },
     { name: "Dhalman Gwala" },
-    { name: "Daman Singh" }
-  ]
+    { name: "Daman Singh" },
+  ],
 };
 //Events Page
 export interface EventItem {
@@ -379,48 +408,22 @@ export interface EventItem {
 export const events: EventItem[] = [
   {
     id: 1,
-    title: "Annual Harvest Festival",
-    slug: "annual-harvest-festival",
-    date: "March 15, 2026",
-    time: "6:00 AM onwards",
-    location: "Ancestral Farmland",
+    title: "Deorai Mahayagya",
+    slug: "deorai-mahayagya",
+    date: "2023",
+    time: "Multi-day Spiritual Ceremony",
+    location: "Deorai Village, Jaunpur, Uttar Pradesh",
     description:
-      "Celebrating the bountiful harvest with traditional rituals, folk music, and community feasting.",
+      "A historic Vedic Mahayagya that united thousands of devotees in prayer, devotion, and the pursuit of peace and prosperity.",
+
     about:
-      "The Annual Harvest Festival is a grand celebration of the bounty of the earth. Families gather at the ancestral farmland to offer prayers of gratitude, participate in traditional rituals, and enjoy a community feast prepared from the freshly harvested grain. Folk musicians perform throughout the day, and the evening culminates in a bonfire celebration with storytelling by the village elders.",
-    image: "/assets/events/event1.jpg",
+      "The Deorai Mahayagya stands as one of the most remarkable spiritual events in the history of Deorai. Organized with the noble purpose of invoking peace, harmony, and prosperity, the sacred gathering brought together thousands of devotees, saints, scholars, and spiritual seekers from different regions. Spread across more than 100 acres of land, the event featured over 1,000 Yagya Kunds where continuous Vedic rituals, sacred fire offerings, and the chanting of ancient mantras were performed in accordance with centuries-old traditions. The entire village transformed into a center of devotion, spirituality, and cultural unity, creating an atmosphere of profound peace and collective faith.",
+
+    image:
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783866216/IMG-20260712-WA0018_fzsbug.jpg",
+
     significance:
-      "This festival has been celebrated by the Singh family for over five generations. It symbolizes the deep connection between the family, the land, and the seasons. The ritual of offering the first sheaf of wheat to the family deity is a tradition that dates back centuries.",
-  },
-  {
-    id: 2,
-    title: "Ganga Aarti Celebration",
-    slug: "ganga-aarti-celebration",
-    date: "April 10, 2026",
-    time: "6:30 PM",
-    location: "Village Ghats",
-    description:
-      "A grand evening aarti on the banks of the Ganges, with devotional songs and oil offerings.",
-    about:
-      "A spectacular evening ceremony on the ghats, where hundreds of oil lamps are lit and offered to the sacred Ganges. The aarti is accompanied by devotional chanting, conch shells, and the rhythmic ringing of bells. The entire village participates, creating a breathtaking spectacle of light and devotion.",
-    image: "/assets/events/event2.jpg",
-    significance:
-      "The Ganga Aarti at our village ghats is modeled after the famous ceremony at Dashashwamedh Ghat in Varanasi but retains its own unique village character. It was revived by Rahul Singh to strengthen community bonds and preserve this ancient tradition.",
-  },
-  {
-    id: 3,
-    title: "Poetry Recital Evening",
-    slug: "poetry-recital-evening",
-    date: "May 5, 2026",
-    time: "5:00 PM",
-    location: "Village Homestead Courtyard",
-    about:
-      "An intimate gathering of literature lovers in the ancestral courtyard, where Rahul Singh and invited poets share their works. The evening features classical sitar and tabla accompaniment, chai served in traditional kulhads, and conversations about the literary traditions of Varanasi. Attendees are encouraged to share their own compositions.",
-    description:
-      "An intimate evening of poetry and guest performances, accompanied by classical music.",
-    image: "/assets/events/event3.jpg",
-    significance:
-      "This event celebrates the literary heritage of the region and Rahul Singh's personal mission to keep the tradition of Urdu and Hindi poetry alive. Past events have attracted renowned poets from across Uttar Pradesh.",
+      "Remembered with immense pride and reverence, the Deorai Mahayagya remains one of the defining chapters of the village's cultural and spiritual heritage. Beyond being a religious gathering, it symbolized unity, selfless service, and the preservation of Vedic traditions. Its legacy continues to inspire future generations, reflecting Deorai's enduring commitment to faith, harmony, and the timeless values of Indian culture.",
   },
 ];
 
@@ -428,7 +431,7 @@ export const events: EventItem[] = [
 
 export const villageData = {
   name: "Deorai",
-  localName: "देोरई",
+  localName: "देवराई",
   alternateName: "Devrai",
 
   location: {
@@ -447,16 +450,11 @@ export const villageData = {
       unit: "meters",
       description: "Above Sea Level",
     },
-    rivers: [
-      "Sai River",
-      "Barwa Nadi",
-    ],
+    rivers: ["Sai River", "Barwa Nadi"],
   },
 
   transport: {
-    nationalHighways: [
-      "NH135A",
-    ],
+    nationalHighways: ["NH135A"],
   },
 
   postal: {
@@ -507,11 +505,7 @@ export const villageData = {
           min: 31.3,
           max: 42.3,
         },
-        conditions: [
-          "Light Rain",
-          "Overcast Clouds",
-          "Broken Clouds",
-        ],
+        conditions: ["Light Rain", "Overcast Clouds", "Broken Clouds"],
       },
       {
         date: "2026-07-15",
@@ -535,11 +529,7 @@ export const villageData = {
           min: 30.0,
           max: 42.1,
         },
-        conditions: [
-          "Overcast Clouds",
-          "Broken Clouds",
-          "Light Rain",
-        ],
+        conditions: ["Overcast Clouds", "Broken Clouds", "Light Rain"],
       },
     ],
   },
@@ -547,7 +537,7 @@ export const villageData = {
 
 export const villageOverview = {
   description:
-    "Deorai is a village in Kerakat Block of Jaunpur district, Uttar Pradesh, India. It belongs to the Varanasi Division and is located 41 km east of the district headquarters, Jaunpur, 13 km from Kerakat, and approximately 290 km from the state capital, Lucknow.",
+    "Deorai/Devrai is a village in Kerakat Block of Jaunpur district, Uttar Pradesh, India. It belongs to the Varanasi Division and is located 41 km east of the district headquarters, Jaunpur, 13 km from Kerakat, and approximately 290 km from the state capital, Lucknow.",
 
   postal: {
     pinCode: "222129",
@@ -583,19 +573,10 @@ export const villageOverview = {
     south: "Haraua Block",
   },
 
-  nearestCities: [
-    "Saidpur",
-    "Ghazipur",
-    "Varanasi",
-    "Jaunpur",
-    "Mau",
-  ],
+  nearestCities: ["Saidpur", "Ghazipur", "Varanasi", "Jaunpur", "Mau"],
 
   districtBorders: {
-    onBorderOf: [
-      "Jaunpur District",
-      "Varanasi District",
-    ],
+    onBorderOf: ["Jaunpur District", "Varanasi District"],
     neighboringDistrict: "Azamgarh",
   },
 };
@@ -611,7 +592,8 @@ export const pollingStations = [
 export const transportation = {
   rail: {
     nearestStation: "Dobhi Railway Station",
-    description: "Dobhi Railway Station is the nearest railway station to Deorai.",
+    description:
+      "Dobhi Railway Station is the nearest railway station to Deorai.",
   },
 };
 
@@ -697,11 +679,7 @@ export const census2011 = {
 };
 
 export const villagePolitics = {
-  majorPoliticalParties: [
-    "BJP",
-    "SP",
-    "BSP",
-  ],
+  majorPoliticalParties: ["BJP", "SP", "BSP"],
 };
 export const subVillages = [
   "Devrai (Hb1)",
@@ -729,8 +707,7 @@ export const nearbyBusStops = [
   },
   {
     name: "Garakhara Bus Stop",
-    address:
-      "Garakhara - Thanagaddi Road, Uttar Pradesh 222181, India",
+    address: "Garakhara - Thanagaddi Road, Uttar Pradesh 222181, India",
     distanceKm: 6.8,
   },
   {
@@ -871,8 +848,7 @@ export const nearbyRestaurants = [
   },
   {
     name: "Vishal Chinese Fast Food",
-    address:
-      "Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
+    address: "Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
     distanceKm: 3.4,
   },
   {
@@ -1004,8 +980,7 @@ export const electronicShops = [
   },
   {
     name: "Pramod Electronics",
-    address:
-      "Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
+    address: "Sindhora Market, Varanasi, Uttar Pradesh 221208, India",
     distanceKm: 3.2,
   },
 ];
@@ -1085,7 +1060,6 @@ export const nearbyGovernmentOffices = [
   },
 ];
 
-
 //Land
 
 export interface Land {
@@ -1102,50 +1076,391 @@ export interface Land {
 export const lands: Land[] = [
   {
     id: "1",
-    title: "Ancestral Farmland",
+    title: "East – The Orchard Belt (Bagh)",
     description:
-      "Golden wheat fields passed down through seven generations.",
-    area: "12 Bigha",
-    image: "/assets/lands/land1.jpg",
-    slug: "ancestral-farmland",
+      "A lush landscape of orchards, fertile fields, and traditional ponds that reflects Deorai's agricultural richness.",
+    area: "34 Bigha",
+    image:
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863407/purab2_rdgft0.jpg",
+    slug: "east-land",
     details:
-      "This farmland has sustained the family for generations. Wheat in winter and rice in monsoon are cultivated using traditional methods.",
+      "The eastern expanse is embraced by the village’s historic Bagh, a verdant landscape where flourishing orchards merge seamlessly with fertile agricultural fields. Scattered across this picturesque terrain are numerous small and medium-sized talabs (traditional ponds), which have sustained the village’s ecology and agriculture for generations. The harmonious blend of lush greenery, tranquil water bodies, and cultivated farmlands creates an enduring symbol of rural abundance and natural serenity.",
     gallery: [
-      "/assets/lands/land1.jpg",
-      "/assets/lands/land2.jpg",
-      "/assets/lands/land3.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863407/purab2_rdgft0.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863409/purab3_x8rt22.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863408/purab4_nktkmt.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863408/purab1_vnbbmq.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863407/purab6_c4jbam.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863407/purab7_t2lakz.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863407/purab8_abxlvx.jpg",
     ],
   },
   {
     id: "2",
-    title: "The Mango Grove",
+    title: "West – The Residential Estate",
     description:
-      "A lush orchard of ancient mango trees, some over 150 years old.",
-    area: "8 Bigha",
-    image: "/assets/lands/land2.jpg",
-    slug: "mango-grove",
+      "The historic residential heart of the village, preserving ancestral homes, community life, and rural traditions.",
+    area: "40 Bigha",
+    image:
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863482/south6_jngjiw.jpg",
+    slug: "west-land",
     details:
-      "An orchard of rare mango varieties with trees over a century old.",
-      gallery: [
-        "/assets/lands/land1.jpg",
-        "/assets/lands/land2.jpg",
-        "/assets/lands/land3.jpg",
-      ],
+      "The western precinct serves as the heart of the estate, reflecting the rhythm of everyday village life. It encompasses the ancestral haveli, residences for workers, the caretaker’s house, and a spacious angan that forms the social center of the household. Adjacent to these lie traditional shelters for cattle, buffaloes, goats, and poultry, illustrating the village’s enduring bond with agriculture and livestock. This area stands as a testament to self-sustained rural living, heritage, and community.",
+    gallery: [
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863530/west2_jtzumf.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863530/west1_lxzjgw.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863482/south6_jngjiw.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783865699/west3_fcg9sm.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863480/south5_gbteox.jpg",
+    ],
   },
   {
     id: "3",
-    title: "Village Homestead",
+    title: "South – The Great Lake",
     description:
-      "The ancestral seat with the iconic heritage pond and haveli",
-    area: "8 Bigha",
-    image: "/assets/lands/land3.jpg",
-    slug: "village-homestead",
+      "A serene lake surrounded by fertile farmland, sustaining both the village's natural beauty and agricultural heritage.",
+    area: "35 Bigha",
+    image:
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863478/south1_qaa83m.jpg",
+    slug: "south-land",
     details:
-      "An orchard of rare mango varieties with trees over a century old.",
-      gallery: [
-        "/assets/lands/land1.jpg",
-        "/assets/lands/land2.jpg",
-        "/assets/lands/land3.jpg",
-      ],
+      "The southern landscape is defined by the village’s largest and most cherished lake, a timeless centerpiece of both natural beauty and local tradition. Beyond serving as a place for boating, fishing, and quiet recreation, the lake nourishes the exceptionally fertile lands that surround it, enriching the region’s agricultural prosperity. Together, the shimmering waters and productive fields embody the harmony between nature and the village’s enduring way of life.",
+    gallery: [
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863482/south6_jngjiw.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863480/south5_gbteox.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863480/south4_zojj3d.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863479/south3_op8web.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863478/south2_wdpfdy.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863478/south1_qaa83m.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863478/south7_fjstxt.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863477/south8_oonluo.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863477/south10_vn4mwi.jpg",
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783863477/south9_b7kgxt.jpg",
+    ],
   },
+];
+
+//Poems
+export const poems = [
+  {
+    id: 1,
+    title: "बुझते दियों के उजालो सा,",
+    content: `बुझते दियों के उजालो सा,
+गर्दिश में गुजरे सालों सा,
+बारिश में ढहे मकानों सा,
+दूर के अजानो सा,
+वो मैं या मेरा अक्स था या कोई और शख्स था!
+
+पतवार बिना माझी सा,
+हारी हुयी बाजी सा,
+लौट आये शगुन सा,
+एक अनजानी उधेड़-बुन सा,
+वो मैं या मेरा अक्स या कोई और शख्स था!`,
+  },
+  {
+    id: 2,
+    title: "मात तेरी गोंद में आ गिरा एक जवान है",
+    content: `मात तेरी गोंद में आ गिरा एक जवान है,
+तेरा मान रखने को ही दिया बलिदान है!!
+घाव मेरे देख मुझे कायर ना समझ मात,
+ये तो कर रहा अरि की क्रूरता बयान है,
+ज़ख्म सारे सीने पे ही खाए थे हे मात मैंने,
+पीठ पे तो मरणोपरांत के निशान है!!
+छिन्न - भिन्न होके अंग अंग सारे गिर रहे थे,
+दुश्मनो को रौंदने को बाजू बचे शेष थे,
+ह्रदय गति रक्तधार क्षीण पड़ गए मगर,
+विजय दृश्य देखने को नेत्र खुले शेष थे!!
+विजय द्धार पे खड़े चढ़ा रहें हैं रक्त पुष्प,
+युद्ध वेदी राख कई पार्थिव शरीर हैं,
+तेरा मान रखने में ये जो कम पड़े तो मात,
+अर्चना में शीश लिए खड़े कोटि वीर हैं!!`,
+  },
+  {
+    id: 3,
+    title: "इतराये तो वो बहोत कि करके आफताब कैद मुट्ठी में",
+    content: `इतराये तो वो बहोत कि करके आफताब कैद मुट्ठी में,
+हो खबर उन्हें कि मेरे चंद जुगनू ही रात आबाद कर देंगे!
+बंधे हैं हाँथ इस रात मेरे चरागों को बचाने में ,
+आंधियो ठहरना सुबह होते ही तुम्हारा हिसाब कर देंगे!!
+दूर रहते हैं मुझसे जिन्हें फक्र अपनी शोहरत पे,
+है इल्म कि हम मुफ़लिस-ए-ज़िन्दगी उन्हें भी खराब कर देंगे!!
+ज़रूरी है पैनी नज़र शह और मात के खेल में,
+मुंतज़िर हैं एक गलत चाल, इसे प्यादे ही बर्बाद कर देंगे!
+खटक रही थी मेरी आँखों में दोस्ती उनकी,
+मैंने नेवले में कहर सांप में जहर भर दिया !!
+मुनासिब न होगा अब इस हवा में सांस लेना,
+सरफिरे बारूदों ने मरघट सारा शहर कर दिया!
+देख रोते किसी को कभी हंसना न 'घायल',
+आंसुओं ने नजाने कितने शहर समंदर कर दिया!!`,
+  },
+  {
+    id: 4,
+    title: "आसमान से ऊँची थी रंजिशें",
+    content: `आसमान से ऊँची थी रंजिशें,
+घरों में तो कुछ कदम के फासले थे !!
+कहीं पाँव में थी बंदिशें,
+तो कहीं रास्तों के सीनों पे भी छाले थे !!
+सुबह की गीली सीढ़ियों से फिसला,
+लहुलुहान तड़पता रहा सूरज,
+और चाँद एक कतरा रौशनी को !
+रात रचती रही ये सारी साजिशें ,
+और कुछ सितारों के भी दिल काले थे !!
+लहेरें पानियों से निकलती दौड़ती,
+पानियों में ही बिखरती गयी,
+और किश्तियाँ मजधारों में !
+सहारा बनने की तिनकों थी कोशिशें,
+पर हवाओं ने ही अपने रूख बदल डाले थे`,
+  },
+  {
+    id: 5,
+    title: "उम्र गुज़री साहिलों पे सीपियाँ बटोरते",
+    content: `उम्र गुज़री साहिलों पे सीपियाँ बटोरते,
+कभी सैलाबों से टकरा मोतियाँ भी निकाला करो !
+डर जहर का जेहन में समाया हो तो,
+दो चार साँपों को दोनों आस्तीनों में पाला करो !!
+सेंकते रहे बस हाँथ दूर-दूर से ही,
+लगायी है आग तो कभी उंगलिया भी जलाया करो !
+बस थोड़ा लहजा-ए-गुफ्तगू बदल कर,
+खुद की नज़र में गिरने से खुद को बचाया करो!`,
+  },
+  {
+    id: 6,
+    title: "माँ से लिपटी एक फटी शॉल में",
+    content: `माँ से लिपटी एक फटी शॉल में,
+ठिठुरती नन्ही ज़िंदगियाँ,
+घर देख क़हर ना ढाती हैं,
+दिल की ये निष्ठुर सर्दियाँ!!
+सड़को के सुलगे अलावं में,
+कहीं पुलों की कंपित छाँव,
+भरे भरे सब रैन बसेरे,
+लाचारी ढूंढे आशियाँ!!
+मज़ा लूटते शीत लहर का,
+है कैद में जिनके विवस्वान (सूर्य),
+घर देख कहर ना ढाती हैं,
+दिल की ये निष्ठुर सर्दियाँ!!`,
+  },
+  {
+    id: 7,
+    title: `लहूलुहान मातृभूमि है, देश पिशाचो का जंगल`,
+    content: `लहूलुहान मातृभूमि है, देश पिशाचो का जंगल,
+धर वज्र करो वध हे नरेन्द्र, या बनजाओ तुम दावानल !
+है शत्रु सीमा के दोनों तरफ, बस काफ़ी नही भुजा का बल,
+साम-दाम-दंड-भेद का भी अब दिखलाना होगा कौशल !
+लेकर संकल्प इतिहास रचो, दो देश का अब भूगोल बदल,
+वापस जोड़ों खंडित हैं जो अपने नभ, अपने जल-थल !
+धर्मक्षेत्र कुरुक्षेत्र ना हो कट्टरता देश से जाये निकल,
+बहे सभी धर्मों से ऊपर धारा राष्ट्र-धर्म अविरल !
+बन सूर्य पीयो जो है फैली काली रातों की उथल-पुथल,
+ले जगे फगुनहट रंग उषा और निशा प्रकाश से हो धवल !`,
+  },
+  {
+    id: 8,
+    title: "केतना उधायल रहला गइला बुताय,",
+    content: `केतना उधायल रहला गइला बुताय,
+खउलत रहला ठंडी में गइला ठण्डाय !
+हवा भइल टाइट कुल उड़ गयल भौकाल,
+आ गइला औकात में न, कहो केजरीवाल !!
+गोडे का काँटा दमानिया और इल्मी,
+प्रशांत और योगेन्द्र आँखि क बिलनी !
+कोहायं जइहैं जब कुमार और सिसोदिया,
+पार्टी में न बची केहु जरावे के दीया !!
+केकरे भरोसे तू फनबा बवाल,
+आ गइला औकात में न, कहो केजरीवाल !!
+बहुत भायल धरना तनी चलावा अब जांगर,
+नाही हो जइबा अबकी पलिहरे क बानर !
+एक पे एक झूठ के फेकत गइला पासा,
+अबकी चली न कांग्रेस वाला झांसा !
+लेई दिल्ली क जनता तोहार खींच खाल ,
+आ गइला औकात में न , कहो केजरीवाल !
+केतनो बढ़ाय ल तू कचरन क ढेर ,
+सरसठ पे भारी रहियें तीन शेर !
+कहें राहुल सिंह और सुना एक बात,
+पहिले सुधारा आपन कफ-पित्त-वात !
+तब चालिहा कौनो लोमड़ी वाली चाल,
+आ गइला औकात में न , कहो केजरीवाल !`,
+  },
+  {
+    id: 9,
+    title: "बच्चा भूख से बेहाल",
+    content: `बच्चा भूख से बेहाल,
+तड़पता, चिल्लाता सो गया थककर !
+बस थोड़ी देर और - कहती,
+माँ सारी रात उबालती रही पत्थर !!
+नफरतों की धधकती आग ने,
+बीती रात उसे छला था,
+कहीं जल गयी बस्तिया,
+तो कहीं घर जला था,
+पल्लू से मुंह ढकी माँ ने,
+बड़ी मुश्किल से रोका था रोना !
+बच्चा नींद में बडबडाया,
+कुछ तो खाने को दो ना !!`,
+  },
+  {
+    id: 10,
+    title: "जब खेत छोड़ने लगे हो खाल",
+    content: `जब खेत छोड़ने लगे हो खाल,
+हो मीन से हीन भी पोखर ताल,
+घर से विलुप्त हो सीता-गीता,
+हो  धुत्त  नशे में पुत्र-पिता,
+मिलें दूध दही बस किस्सों' में,
+घर बिखर गए हो हिस्सो में,
+हो खारा जल धरातल में,
+तो समझो गांव रसातल में!!
+चमचइ पट्टा पहन के ऐठे,
+जब उल्लू हर विभाग में बैठे,
+झंडा गैर के काम पे गाडे,
+गलती का बिल किसी पे फाडे,
+काम पड़े तो ले अवकाश,
+वेतन बढ़ छू ले आकाश,
+हो मगन सभी मनमानी में,
+तो गयी कंपनी पानी में!!
+कुर्सी का रोज़ हो चीरहरण,
+तमाशबीन द्रोण भीष्म करण,
+शकुनियों का बोलबाला हो,
+सच का हो रहा मुंह कला हो,
+राज हो जैसे जंगल में,
+तब्दील हो संसद चम्बल में,
+और हो विदेशी जब सत्ता में,
+तो कुटे देश खल-बटृटा में !!`,
+  },
+  {
+    id: 11,
+    title: "सालों बाद",
+    content: `सालों बाद,
+कल पुरानी एल्बम से रूबरू हुआ।
+कुछ तस्वीरें धुंधली,
+कुछ अपरिचित,
+तो कुछ मैली हो चली थीं।
+कुछ होठों पर मुस्कान ले आईं,
+तो कुछ आँखों को नम कर चली थीं।
+एक तस्वीर ले गई पुरानी छत पे,
+याद आया —
+खामोशी से तकना चाँद को।
+गुनगुनी धूप,
+गरम चाय,
+चोट के निशान,
+ट्रेन का सफ़र,
+दोस्तों की ठिठोली—
+हर एक तस्वीर कोई दास्तान कह चली थी!
+एक फोटो ढूँढते-ढूँढते उँगली थक गई,
+कौन जाने वो किस पन्ने में खो गई थी,
+या तारीख़ उसे मिटा गई थी।
+हर तस्वीर की एक कहानी,
+और हर कहानी थोड़ा-सा मैं,
+थोड़ा-सा मेरा होना।`,
+  },
+  {
+    id: 12,
+    title: `आँधी-तूफ़ान`,
+    content: `आँधी-तूफ़ान,
+ट्रैफ़िक जाम
+और काम ज़रूरी,
+ऐसे अग्निपथ का नाम है "मुंबई"!!!
+भागम-भाग,
+सपनों की आग
+और नींदें अधूरी,
+ऐसे अग्निपथ का नाम है "मुंबई"!!!
+पत्थरीली डगर,
+हवा में ज़हर
+और हिम्मत ज़रूरी,
+ऐसे अग्निपथ का नाम है "मुंबई"!!!`,
+  },
+  {
+    id: 13,
+    title: "रोम-रोम में गौरी शंकर",
+    content: `रोम-रोम में गौरी शंकर,
+गंगा दौड़े नस-नस में,
+मस्ती, भक्ति, शक्ति, मुक्ति,
+सब रस रजा बनारस में!
+घंट, शंख, घड़ियाल, नगाड़ा
+आरती के तरकश में,
+नारा "हर-हर महादेव" का
+गूंजे रजा बनारस में।
+गुरु, ज्ञान, विधि-विज्ञान
+पी लें तिमिर अमावस में,
+सिद्ध, साधु, योगी, आघोरी
+विचरें रजा बनारस में।
+पान कचौड़ी, चाट जलेबी,
+सब सुख लहे बनारस में
+काल, बैताल, विकराल-महाकाल,
+पहरै रजा बनारस में!!`,
+  },
+  {
+    id:14,
+    title:`अहसास हुआ, जब उठाया जिम्मेदारियों का बोझ `,
+    content:`अहसास हुआ, जब उठाया जिम्मेदारियों का बोझ 
+कितना हल्का था वो बैग स्कूल का, 
+ले हाथों में नश्तर गले मिलते यहाँ लोग, 
+थे कमीने पर दोस्तों में कितना उसूल था।
+
+लगा था बाज़ार  बिक रहे थे ईमान पर,
+इख़लाक़ के हांथो ही बिकना मुझे कबूल था !
+दिखे रंग दुनिया के, फितरत इन्सानो की,
+भरी-खाली जेबें इस दर्शन का मूल था।
+
+स्वप्न हो दफ़न चले हक़ीक़तों की कब्र में,
+सूख गए फूल बाग़ में बचा बबूल था।
+जिया काम के लिए या काम किया जीने को,
+थका तो लगा सब कमाना फ़िज़ूल था।`
+  },
+
+  {
+    id:15,
+    title:`मानव हित हैं मौन अभी तो भूल न जाना रखना याद`,
+    content:`मानव हित हैं मौन अभी तो भूल न जाना रखना याद,
+ऑपरेशन सिन्दूर, कारगिल और उरी की हार का स्वाद,
+है सृजन-शांति सीने में पर, हम हैं विनाश की टोली भी,
+रक्त तिलक माथे पर लेकिन खेलें खून की होली भी,
+दहल उठे पर्वत विशाल जब हम भीषण हुंकार भरे,
+काँप उठे कलेजा दुश्मन का रण में ऐसे संहार करें,
+टकराते तूफानों से, बन प्रलय टूटते हैं रण में,
+लिखते हैं मिटाते हैं, रचते इतिहास हैं क्षण क्षण में,
+हैं गोरिल्ला हम क्षत्रपति के राणा के वंशज हैं वीर,
+पी जाते आग हैं सूर्य की, रहते सिंधु से है गंभीर,
+धधक रहा कश्मीर कहीं तो कोई मांगे खालिस्तान,
+प्रहरी चट्टानों से हैं हम रखे अखंडित हिस्दुस्तान।`
+  },
+  {
+    id:16,
+    title:`आजमाइशें बढ़ती रही`,
+    content:`आजमाइशें बढ़ती रही,
+मैं बटता रहा दामन दामन,
+मुश्किलें समंदर से गहरी
+ठोकरें शहर की - हर कदम !
+
+सादगी से, एक ताज़गी की,
+रौशनी सी जल गयी,
+आँखो से बख्शती ज़िंदगी,
+आयी रीतू, ऋत बदल गयी !!
+
+भोलेपन में बच्चो सी वो,
+पर सुलझाती हर उलझन,
+माली मेरी बगिया की वो,
+हैं दो फूल, परी - अरहन !!
+
+परे राग-द्वेष-ईर्ष्या से,
+संजोती रिश्तो के बंधन,
+ना एहसाह हो दूरी का अब,
+जुड़े हैं ऐसे अपने मन !!`,
+  },
+  {
+    id:17,
+    title:`नया ज़िन्दगी में जोश था`,
+    content:`नया ज़िन्दगी में जोश था,
+संभाला जब से होश था !
+थी सोच सही फैसलों की,
+न कोई हद थी हौसलों की !
+उमंग थी तरंग थी,
+जिया इस यकीन पर,
+दूंगा कुचल भी आसमान,
+रख के आईना ज़मीन पर!
+पर वक़्त ने बुना था जाल,
+भाग्य चला अपनी चाल,
+फंसा निहत्था चक्रव्यूह में,
+न थी तलवार न कोई ढाल !
+हुए ख्वाब सब घुआँ - घुआँ,
+हिम्मत टूटी थी पस्त हौसले
+सर झुका हालात के आगे,
+मंजूर हुए सब फैसले !`
+  }
 ];

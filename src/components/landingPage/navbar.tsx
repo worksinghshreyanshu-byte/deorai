@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
 import { FaBars } from "react-icons/fa";
 import { menuLinks } from "@/utils/constants";
+import Image from "next/image";
 
 const MobileSidebar = dynamic(() => import("./mobileSidebar"), {
   ssr: false,
@@ -28,16 +29,15 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-[#f3ede6] border-b border-[#e5d7c8]">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
-        
-        <Link href="/">
-          <div className="cursor-pointer">
-            <h1 className="text-2xl font-semibold text-brand tracking-wide">
-              ग्राम विरासत
-            </h1>
-            <p className="text-xs text-gray-500 tracking-widest">
-              A LEGACY OF LAND & LETTERS
-            </p>
-          </div>
+        <Link href="/" className="block">
+          <Image
+            src="/logo.png"
+            alt="Gram Virasat"
+            width={220}
+            height={70}
+            priority
+            className="h-auto w-[170px] sm:w-[190px] md:w-[180px]"
+          />
         </Link>
 
         <div className="hidden xl:flex items-center gap-6 text-sm font-medium">

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         <div>
           <h2 className="text-2xl font-semibold text-[#d97706] mb-3">
-            ग्राम विरासत
+          देवराई
           </h2>
 
           <p className="italic text-sm text-[#cbb79f] leading-relaxed">

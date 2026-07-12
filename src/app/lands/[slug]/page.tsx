@@ -38,7 +38,7 @@ export default async function LandDetailsPage({ params }: PageProps) {
             className="mb-4"
           />
           <div className="flex md:justify-end">
-            <div className="inline-flex items-center gap-2 bg-[#efe4d8] text-brand px-6 py-1.5 rounded-xl shadow-sm border border-[#e2d6c8]">
+            <div className="inline-flex items-center gap-2 bg-[#efe4d8] text-brand px-3 py-1.5 rounded-xl shadow-sm border border-[#e2d6c8]">
               <span className="text-base font-semibold">{land.area}</span>
             </div>
           </div>

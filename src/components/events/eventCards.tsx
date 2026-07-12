@@ -6,7 +6,7 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export default function EventsSection() {
   return (
-    <section className="py-20">
+    <section className=" pt-10 pb-24">
       <div className="max-w-5xl mx-auto px-6 space-y-10">
         {events.map((event) => (
           <Link
