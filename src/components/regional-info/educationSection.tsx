@@ -6,7 +6,7 @@ import SectionHeader from "../general/sectionHeader";
 
 export default function EducationSection() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 lg:py-24 py-16">
       <SectionHeader
         eyebrow="Education"
         title="Learning Institutions"

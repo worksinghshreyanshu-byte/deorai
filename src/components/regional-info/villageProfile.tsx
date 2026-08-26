@@ -14,7 +14,7 @@ import SectionHeader from "../general/sectionHeader";
 
 export default function VillageProfile() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
       <SectionHeader
         eyebrow="Regional Heritage"
         title={villageData.name}
@@ -23,21 +23,21 @@ export default function VillageProfile() {
 
       <div className="grid gap-12 lg:grid-cols-[1.2fr_380px]">
         <div>
-          <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-10">
-            <h3 className="font-serif text-3xl text-brand">
+          <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-6 lg:p-10">
+            <h3 className="font-serif text-xl lg:text-3xl text-brand font-semibold">
               About the Village
             </h3>
 
-            <div className="my-6 h-px bg-[#E4D6C7]" />
+            <div className="lg:my-6 my-3 h-px bg-[#E4D6C7]" />
 
-            <p className="leading-9 text-[#5E4634]">
+            <p className="lg:leading-9 leading-7 lg:text-lg text-sm text-[#5E4634]">
               {villageOverview.description}
             </p>
           </div>
-          <div className="mt-10 rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-10">
-            <h3 className="font-serif text-3xl text-brand">Geography</h3>
+          <div className="mt-10 rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] lg:p-10 p-6">
+            <h3 className="font-serif text-lg font-semibold lg:text-3xl text-brand">Geography</h3>
 
-            <div className="my-6 h-px bg-[#E4D6C7]" />
+            <div className="lg:my-6 my-4 h-px bg-[#E4D6C7]" />
 
             <div className="grid gap-8 md:grid-cols-2">
               <InfoRow
@@ -67,7 +67,7 @@ export default function VillageProfile() {
           </div>
 
           <div className="mt-10 rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-10">
-            <h3 className="font-serif text-3xl text-brand">Nearby Villages</h3>
+            <h3 className="font-serif text-lg font-semibold lg:text-3xl text-brand">Nearby Villages</h3>
 
             <div className="my-6 h-px bg-[#E4D6C7]" />
 
@@ -77,9 +77,9 @@ export default function VillageProfile() {
                   key={village.name}
                   className="flex items-center justify-between border-b border-[#E4D6C7] pb-4 last:border-0"
                 >
-                  <span className="text-lg text-[#5E4634]">{village.name}</span>
+                  <span className="lg:text-lg text-sm text-[#5E4634]">{village.name}</span>
 
-                  <span className="rounded-full bg-[#F3E7D8] px-4 py-1.5 text-sm font-medium text-brand">
+                  <span className="rounded-full bg-[#F3E7D8] px-4 py-1.5 text-xs lg:text-sm font-medium text-brand">
                     {village.distanceKm} km
                   </span>
                 </div>
@@ -88,8 +88,8 @@ export default function VillageProfile() {
           </div>
         </div>
 
-        <aside className="h-fit rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-10">
-          <h3 className="font-serif text-3xl text-brand">At a Glance</h3>
+        <aside className="h-fit rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-6 lg:p-10">
+          <h3 className="font-serif text-lg font-semibold lg:text-3xl text-brand">At a Glance</h3>
 
           <div className="my-6 h-px bg-[#E4D6C7]" />
 
@@ -154,7 +154,7 @@ function InfoRow({ icon, title, value }: Props) {
           {title}
         </p>
 
-        <p className="mt-1 text-lg text-[#5E4634]">{value}</p>
+        <p className="mt-1 text-sm text-[#5E4634]">{value}</p>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ import ServiceCard from "./serviceCard";
 
 export default function CommerceSection() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 lg:py-24 py-16">
       <SectionHeader
         eyebrow="Commerce"
         title="Markets & Recreation"

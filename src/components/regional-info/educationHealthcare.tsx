@@ -15,16 +15,13 @@ import SectionHeader from "../general/sectionHeader";
 
 export default function EducationHealthcare() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 lg:py-24 py-16">
       <SectionHeader
         eyebrow="Public Services"
         title="Education & Healthcare"
         subtitle="Educational institutions and healthcare facilities serving Deorai and its neighboring villages."
       />
-
       <div className="grid gap-8 lg:grid-cols-3">
-        {/* Colleges */}
-
         <InfoCard
           icon={<GraduationCap size={24} />}
           title="Nearby Colleges"
@@ -38,8 +35,6 @@ export default function EducationHealthcare() {
           ))}
         </InfoCard>
 
-        {/* Schools */}
-
         <InfoCard
           icon={<School size={24} />}
           title="Schools"
@@ -52,8 +47,6 @@ export default function EducationHealthcare() {
             />
           ))}
         </InfoCard>
-
-        {/* Health */}
 
         <InfoCard
           icon={<HeartPulse size={24} />}
@@ -80,19 +73,16 @@ interface CardProps {
 
 function InfoCard({ icon, title, children }: CardProps) {
   return (
-    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
+    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-6 lg:p-8">
       <div className="flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
           {icon}
         </div>
-
-        <h3 className="font-serif text-2xl text-brand">
+        <h3 className="font-serif text-lg font-semibold lg:text-2xl text-brand">
           {title}
         </h3>
       </div>
-
-      <div className="my-6 h-px bg-[#E4D6C7]" />
-
+      <div className="lg:my-6 my-4 h-px bg-[#E4D6C7]" />
       <div className="space-y-5">{children}</div>
     </div>
   );
@@ -106,7 +96,7 @@ interface ListItemProps {
 function ListItem({ title, subtitle }: ListItemProps) {
   return (
     <div className="border-b border-[#E4D6C7] pb-5 last:border-b-0 last:pb-0">
-      <h4 className="font-medium text-[#5E4634]">
+      <h4 className="font-medium lg:text-lg text-sm text-[#5E4634]">
         {title}
       </h4>
 

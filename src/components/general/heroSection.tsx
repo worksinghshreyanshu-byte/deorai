@@ -8,11 +8,11 @@ interface HeroSectionProps {
     return (
       <section className="bg-[#3E2417] text-white py-24">
         <div className="max-w-4xl mx-auto text-center px-6">
-          <p className="tracking-widest text-sm text-[#C49A6C]">
+          <p className="tracking-widest text-sm text-[#C49A6C] font-semibold">
             {label}
           </p>
   
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
+          <h1 className="text-4xl md:text-6xl font-serif mt-4 font-semibold">
             {title}
           </h1>
   

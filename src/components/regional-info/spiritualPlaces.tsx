@@ -9,7 +9,7 @@ import SectionHeader from "../general/sectionHeader";
 
 export default function SpiritualPlaces() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
       <SectionHeader
         eyebrow="Cultural Heritage"
         title="Places of Worship"
@@ -55,19 +55,16 @@ function FacilityCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
+    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-5 lg:p-8">
       <div className="flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
           {icon}
         </div>
-
-        <h3 className="font-serif text-2xl text-brand">
+        <h3 className="font-serif text-lg font-semibold lg:text-2xl text-brand">
           {title}
         </h3>
       </div>
-
       <div className="my-6 h-px bg-[#E4D6C7]" />
-
       <div className="space-y-5">{children}</div>
     </div>
   );
@@ -84,12 +81,12 @@ function FacilityItem({
 }) {
   return (
     <div className="border-b border-[#E4D6C7] pb-5 last:border-0">
-      <div className="flex justify-between gap-4">
-        <h4 className="font-medium text-[#5E4634]">
+      <div className="flex justify-between gap-3 lg:gap-4">
+        <h4 className="text-sm font-semibold lg:line-clamp-2 line-clamp-1 text-[#5E4634]">
           {name}
         </h4>
 
-        <span className="rounded-full bg-[#F3E7D8] px-3 py-1 text-sm font-medium text-brand">
+        <span className="rounded-full bg-[#F3E7D8] px-3 py-1 text-center text-xs lg:text-sm font-medium text-brand">
           {distanceKm} km
         </span>
       </div>

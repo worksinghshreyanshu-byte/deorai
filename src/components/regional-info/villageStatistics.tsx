@@ -16,7 +16,7 @@ import SectionHeader from "../general/sectionHeader";
 
 export default function VillageStatistics() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
       <SectionHeader
         eyebrow="Village Records"
         title="Census & Demographics"
@@ -24,7 +24,6 @@ export default function VillageStatistics() {
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
-        {/* Population */}
 
         <StatCard
           title="Population"
@@ -45,9 +44,6 @@ export default function VillageStatistics() {
             value={`${census2011.population.femalePopulation} (${census2011.population.femalePercentage}%)`}
           />
         </StatCard>
-
-        {/* Literacy */}
-
         <StatCard
           title="Literacy"
           icon={<BookOpen size={24} />}
@@ -67,8 +63,6 @@ export default function VillageStatistics() {
             value={`${census2011.literacy.femaleLiterates} (${census2011.literacy.femaleRate}%)`}
           />
         </StatCard>
-
-        {/* Demographics */}
 
         <StatCard
           title="Demographics"
@@ -100,8 +94,6 @@ export default function VillageStatistics() {
           />
         </StatCard>
 
-        {/* Politics */}
-
         <StatCard
           title="Political Landscape"
           icon={<Landmark size={24} />}
@@ -119,26 +111,24 @@ export default function VillageStatistics() {
         </StatCard>
       </div>
 
-      {/* Sub Villages */}
-
-      <div className="mt-10 rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-10">
+      <div className="mt-10 rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-5 lg:p-10">
         <div className="flex items-center gap-4">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
             <MapPinned size={24} />
           </div>
 
-          <h3 className="font-serif text-3xl text-brand">
+          <h3 className="font-serif text-lg font-semibold lg:text-3xl text-brand">
             Hamlets & Sub Villages
           </h3>
         </div>
 
-        <div className="my-6 h-px bg-[#E4D6C7]" />
+        <div className="lg:my-6 my-3 h-px bg-[#E4D6C7]" />
 
         <div className="flex flex-wrap gap-4">
           {subVillages.map((village) => (
             <span
               key={village}
-              className="rounded-full border border-[#D7C3AC] bg-[#FCF8F3] px-5 py-2 text-[#5E4634]"
+              className="rounded-full border  text-sm border-[#D7C3AC] bg-[#FCF8F3] px-5 py-2 text-[#5E4634]"
             >
               {village}
             </span>
@@ -161,13 +151,13 @@ function StatCard({
   children,
 }: StatCardProps) {
   return (
-    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
+    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-6 lg:p-8">
       <div className="flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
           {icon}
         </div>
 
-        <h3 className="font-serif text-2xl text-brand">
+        <h3 className="font-serif text-lg font-semibold lg:text-2xl text-brand">
           {title}
         </h3>
       </div>
@@ -189,7 +179,7 @@ function StatRow({
   value,
 }: StatRowProps) {
   return (
-    <div className="flex items-center justify-between border-b border-[#E4D6C7] pb-3 last:border-0">
+    <div className="flex items-center lg:text-lg text-sm justify-between border-b border-[#E4D6C7] pb-3 last:border-0">
       <span className="text-[#8B6F59]">
         {label}
       </span>
