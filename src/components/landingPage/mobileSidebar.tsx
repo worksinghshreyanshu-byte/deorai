@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Drawer } from "antd";
 import { IoCloseOutline } from "react-icons/io5";
 import { menuLinks } from "@/utils/constants";
+import Image from "next/image";
 
 interface MobileSidebarProps {
   open: boolean;
@@ -37,9 +38,11 @@ export default function MobileSidebar({
       styles={{ body: { backgroundColor: "#f3ede6" } }}
       title={
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-semibold text-[#c2410c]">
-            ग्राम विरासत
+           <Link href="/" className="block">
+           <h2 className="text-2xl font-semibold text-brand ">
+          देवराई
           </h2>
+        </Link>
 
           <IoCloseOutline
             className="cursor-pointer text-2xl text-gray-500"
