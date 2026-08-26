@@ -47,7 +47,7 @@ export default function KashinathSinghSection() {
               />
             </div>
 
-            <div className="space-y-7 text-lg leading-9 text-[#5E4634]">
+            <div className="space-y-7 lg:text-lg lg:leading-9 text-md leading-7 text-[#5E4634]">
               <p>
                 Among the many lives that shaped the history of Deorai,
                 few command the same reverence as Kashinath Singh—a
@@ -86,8 +86,8 @@ export default function KashinathSinghSection() {
               </p>
             </div>
 
-            <div className="mt-12 rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
-              <p className="font-serif text-2xl italic leading-10 text-brand">
+            <div className="mt-12 rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] lg:p-8 p-6">
+              <p className="font-serif text-xl lg:text-2xl italic leading-7 lg:leading-10 text-brand">
                 “His legacy belongs not only to his descendants,
                 but to the enduring history of Deorai.”
               </p>

@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[#4A2F23] text-white">
-      {/* Grid Background */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -15,44 +14,37 @@ export default function HeroSection() {
           backgroundSize: "120px 120px",
         }}
       />
-
       <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-52 text-center">
-        <p className="text-xs uppercase tracking-[0.45em] text-brand">
+        <p className="text-xs uppercase tracking-[0.45em] font-bold text-brand">
           Preserving Ancestral Legacy
         </p>
-
-        <h1 className="mx-auto mt-8 max-w-5xl font-serif text-5xl leading-tight text-[#F7F2EA] md:text-7xl">
+        <h1 className="mx-auto mt-8 max-w-5xl font-serif font-semibold text-5xl leading-tight text-[#F7F2EA] md:text-7xl">
           Where the soil remembers
           <br />
-          <span className="italic font-light">
+          <span className="italic  font-semibold">
             every footstep.
           </span>
         </h1>
-
-        <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-[#D5C4B6]">
+        <p className="mx-auto mt-8 max-w-3xl text-md lg:text-xl leading-9 text-[#D5C4B6]">
           A digital archive of Deorai village — its heritage,
           fertile lands, and the lineage of those who called
           this sacred dust home.
         </p>
-
         <div className="mt-14 flex flex-wrap items-center justify-center gap-5">
           <Link
             href="/regional-info"
-            className="border border-[#7A6558] px-10 py-4 text-sm uppercase tracking-[0.18em] transition hover:border-brand hover:bg-brand hover:text-white"
+            className="border border-[#7A6558] px-10 py-4 text-sm uppercase tracking-[0.18em] transition-all duration-200 active:scale-95 hover:border-brand hover:bg-brand hover:text-white"
           >
             Explore the Region
           </Link>
-
           <Link
             href="/about"
-            className="bg-brand px-10 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:opacity-90"
+            className="bg-brand px-10 py-4 text-sm uppercase tracking-[0.18em] text-white transition-all active:scale-95 duration-200 hover:opacity-90"
           >
             Read the Memoir
           </Link>
         </div>
       </div>
-
-      {/* Floating Cards */}
 
       <div className="relative mx-auto -mt-28 grid max-w-7xl gap-8 px-6 pb-20 lg:grid-cols-3">
         <InfoCard
@@ -95,20 +87,16 @@ function InfoCard({
 }: CardProps) {
   return (
     <div className="rounded-sm border border-[#E4D8CA] bg-[#F7F2EA] p-8 shadow-xl">
-      <p className="text-xs uppercase tracking-[0.28em] text-brand">
+      <p className="text-xs uppercase font-bold tracking-[0.28em] text-brand">
         {label}
       </p>
-
-      <h3 className="mt-6 font-serif text-5xl text-[#493126]">
+      <h3 className="mt-6 font-serif font-semibold text-3xl lg:text-5xl text-[#493126]">
         {title}
       </h3>
-
       <p className="mt-2 italic text-[#8B6F59]">
         {subtitle}
       </p>
-
       <div className="my-8 h-px bg-[#E6DACB]" />
-
       <p className="leading-7 text-[#5E4634]">
         {description}
       </p>

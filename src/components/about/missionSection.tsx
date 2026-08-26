@@ -31,7 +31,7 @@ export default function MemorialSection() {
           {memorialSection.verses.map((verse, index) => (
             <p
               key={index}
-              className="whitespace-pre-line font-serif text-xl leading-10 text-[#5E4634]"
+              className="whitespace-pre-line font-serif text-lg lg:text-xl leading-7 lg:leading-10 text-[#5E4634]"
             >
               {verse}
             </p>

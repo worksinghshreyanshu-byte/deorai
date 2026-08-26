@@ -44,7 +44,7 @@ export default function Footer() {
       <div className="my-10 border-t border-[#6b3f24]"></div>
 
       <div className="text-center text-sm text-[#cbb79f]">
-        © 2026 Gram Virasat. All rights reserved.
+        © 2026 Shreyanshu Singh | Deorai. All rights reserved.
       </div>
     </footer>
   );

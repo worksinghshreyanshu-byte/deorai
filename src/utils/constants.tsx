@@ -74,7 +74,7 @@ export const worksSection = {
       title: "थोड़े शब्द लगभग में",
       slug: "thode-shabd-lagbhag-me",
       description:
-        "A meditative anthology exploring the spiritual and cultural essence of Varanasi through verse.",
+        "मनन से उपजे और समय के स्पर्श से परिपक्व हुए इन काव्यांशों में राहुल सिंह की संवेदना, जीवन-दृष्टि और आत्मचिंतन का स्वर निहित है। श्रेयांशु सिंह द्वारा संकलित एवं प्रकाशित यह संग्रह उन शब्दों को समर्पित है, जो पीढ़ियाँ बदल जाने पर भी अपना अर्थ नहीं खोते।",
     },
   ],
 };
@@ -108,160 +108,723 @@ export interface TimelineItem {
   id: number;
   period: string;
   title: string;
-  description: string;
+  summary: string;
+  details: {
+    introduction?: string;
+    genealogy?: string[];
+    settlements?: string[];
+    achievements?: string[];
+    legacy?: string[];
+    quote?: string;
+    notes?: string[];
+  };
 }
+
 export const timelineData: TimelineItem[] = [
   {
     id: 1,
     period: "1590",
     title: "Migration from Ayodhya",
-    description:
-      "Brahmadev and Nayandev left their ancestral village Dambhua in Ayodhya and journeyed toward Kashi. They were accompanied by Dhalman Gwala.",
+    summary:
+      "Brahmadev and Nayandev left Dambhua in Ayodhya and journeyed eastward toward Kashi to attend Princess Indumati's swayamvara.",
+    details: {
+      introduction:
+        "In 1590, the two brothers Brahmadev and Nayandev departed from their ancestral village of Dambhua in Ayodhya, then part of the Awadh province. They travelled east toward the sacred city of Kashi to attend the swayamvara of the King of Kashi's daughter.",
+      achievements: [
+        "Their journey became the starting point of the family's recorded history.",
+        "The event attracted noble houses from across the region."
+      ],
+      notes: [
+        "Dhalman Gwala accompanied them throughout this historic journey."
+      ]
+    }
   },
 
   {
     id: 2,
     period: "1590",
-    title: "Marriage Alliance with Kashi",
-    description:
-      "Nayandev won the hand of Princess Indumati, daughter of the King of Kashi. The king granted territory that later became known as the Dobhi region.",
+    title: "Marriage with Princess Indumati",
+    summary:
+      "Nayandev married Princess Indumati, establishing an alliance that changed the family's destiny.",
+    details: {
+      introduction:
+        "Nayandev won the hand of Princess Indumati, daughter of the King of Kashi.",
+      achievements: [
+        "The King granted Nayandev and Brahmadev a substantial portion of his kingdom.",
+        "The granted territory later became known as the Dobhi region."
+      ],
+      legacy: [
+        "The marriage established the family's political influence in eastern Uttar Pradesh."
+      ]
+    }
   },
 
   {
     id: 3,
     period: "Late 16th Century",
-    title: "Rise of Baraichhabir",
-    description:
-      "Dhalman Gwala became revered as Baraichhabir. A temple was later established in his honor at Baraichha near Chandwak.",
+    title: "The Legacy of Baraichhabir",
+    summary:
+      "Dhalman Gwala became revered as Baraichhabir and remains remembered through a temple at Baraichha.",
+    details: {
+      introduction:
+        "Dhalman Gwala accompanied Brahmadev and Nayandev on their historic migration.",
+      achievements: [
+        "He later became revered as Baraichhabir.",
+        "A temple was established in his honor at Chandwak in Baraichha."
+      ],
+      legacy: [
+        "His memory continues through local tradition and religious reverence."
+      ]
+    }
   },
 
   {
     id: 4,
-    period: "17th Century",
-    title: "Settlement of Deorai",
-    description:
-      "Nayandev's sons Deorai and Nagairai settled in the region. The village of Deorai derived its name from Deorai.",
+    period: "16th Century",
+    title: "Two Noble Lineages Unite",
+    summary:
+      "Brahmadev and Nayandev represented two respected lineages—Chaubey Brahmins and Raghuvanshis.",
+    details: {
+      genealogy: [
+        "Nayandev belonged to the noble Raghuvanshi lineage.",
+        "Brahmadev belonged to the respected Chaubey Brahmin lineage."
+      ],
+      legacy: [
+        "Together they symbolized valor and wisdom.",
+        "Their partnership became the foundation of generations that followed."
+      ]
+    }
   },
 
   {
     id: 5,
     period: "17th Century",
-    title: "Expansion of Nagairai's Line",
-    description:
-      "Nagairai's sons Vamdev and Goanvdev established branches in Vamvaavan (Vaasvari) and Chhoti Deorai, expanding the family's influence.",
+    title: "Birth of Devrai and Nagairai",
+    summary:
+      "Nayandev's two sons continued the lineage and laid the foundation for future generations.",
+    details: {
+      genealogy: [
+        "Nayandev had two sons: Devrai and Nagairai (also known as Devanrai)."
+      ],
+      legacy: [
+        "Both sons continued the Raghuvanshi lineage."
+      ]
+    }
   },
 
   {
     id: 6,
-    period: "17th–18th Century",
-    title: "Migration to New Regions",
-    description:
-      "Descendants settled in Mohanidih and Jamsar. Later generations migrated to Chunar and Mirzapur, extending the Raghuvanshi presence.",
+    period: "17th Century",
+    title: "Foundation of Deorai",
+    summary:
+      "Devrai gave his name to the village of Deorai, preserving the family's legacy in the region.",
+    details: {
+      introduction:
+        "Devrai and Nagairai both settled in the region after their father's arrival.",
+      settlements: [
+        "The village of Deorai derived its name from Devrai.",
+        "Both brothers permanently settled there."
+      ],
+      legacy: [
+        "Their settlement established the ancestral seat of the family."
+      ]
+    }
   },
 
   {
     id: 7,
     period: "17th Century",
-    title: "Line of Deorai",
-    description:
-      "Devrai's sons Bhuj Rai and Virahaj Rai remained in Deorai and strengthened the family's ancestral seat.",
+    title: "The Sons of Nagairai",
+    summary:
+      "Nagairai's sons established influential branches that expanded the family's reach.",
+    details: {
+      genealogy: [
+        "Nagairai had two sons: Vamdev and Goanvdev."
+      ],
+      settlements: [
+        "Vamdev established himself in Vamvaavan (Vaasvari)."
+      ]
+    }
   },
 
   {
     id: 8,
-    period: "17th–18th Century",
-    title: "Branch of Virahaj Rai",
-    description:
-      "Virahaj Rai's sons included Pukaar Rai, Gelhu, Melhu and Kewatu Rai. Kewatu Rai's descendants eventually spread across twenty-four villages in present-day West Bengal.",
+    period: "17th Century",
+    title: "Goanvdev Becomes Goanpati",
+    summary:
+      "Goanvdev became village head, and Chhoti Deorai emerged from his settlement.",
+    details: {
+      introduction:
+        "Goanvdev rose to prominence within the community.",
+      achievements: [
+        "He became the village head (Goanpati)."
+      ],
+      settlements: [
+        "His settlement later became known as Chhoti Deorai."
+      ],
+      legacy: [
+        "His leadership gave lasting identity to the village."
+      ]
+    }
   },
 
   {
     id: 9,
-    period: "17th–18th Century",
-    title: "Branch of Bhuj Rai",
-    description:
-      "Bhuj Rai's six sons established several important branches. Keel Rai remained in Deorai while Varmal Rai and Kuber Rai founded Varmalpur.",
+    period: "17th Century",
+    title: "Expansion into Mohanidih and Jamsar",
+    summary:
+      "The descendants expanded beyond Deorai, establishing new settlements.",
+    details: {
+      settlements: [
+        "Branches settled in Mohanidih.",
+        "Branches settled in Jamsar."
+      ],
+      legacy: [
+        "The Raghuvanshi traditions spread into neighboring regions."
+      ]
+    }
   },
 
   {
     id: 10,
-    period: "18th Century",
-    title: "Legacy of Narsingh Das",
-    description:
-      "Through Keval Rai's descendants emerged Narsingh Das, whose lineage expanded into numerous villages across the region.",
+    period: "17th Century",
+    title: "Migration to Chunar and Mirzapur",
+    summary:
+      "Later generations from Mohanidih migrated farther east into Chunar and Mirzapur.",
+    details: {
+      settlements: [
+        "Descendants established themselves in Chunar.",
+        "Later they expanded into Mirzapur."
+      ],
+      legacy: [
+        "Their influence continued to shape local history."
+      ]
+    }
   },
 
   {
     id: 11,
-    period: "18th Century",
-    title: "Harihar Singh's Legacy",
-    description:
-      "Harihar Singh became famous for extraordinary physical strength and spiritual devotion. Hariharpur is believed to be named after him.",
+    period: "17th Century",
+    title: "The Jamsar Branch",
+    summary:
+      "Although the direct Raghuvanshi line became extinct in Jamsar, their descendants remain.",
+    details: {
+      introduction:
+        "The Jamsar branch experienced a different fate from the other family branches.",
+      achievements: [
+        "The direct Raghuvanshi lineage eventually became extinct there."
+      ],
+      legacy: [
+        "Their grandsons, locally called Nawase, continue to reside in the region.",
+        "They preserve the memory of their ancestral roots."
+      ]
+    }
   },
 
   {
     id: 12,
-    period: "18th–19th Century",
-    title: "Expansion Through Ishwardas and Ramdev",
-    description:
-      "The descendants of Ishwardas and Ramdev established family branches across dozens of villages including Narayanpur, Kusumhi, Heerapur, Khujji and others.",
+    period: "17th Century",
+    title: "The House of Devrai",
+    summary:
+      "Devrai's sons strengthened Deorai as the family's ancestral seat.",
+    details: {
+      genealogy: [
+        "Devrai had two sons: Bhuj Rai and Virahaj Rai."
+      ],
+      settlements: [
+        "Both remained in Deorai."
+      ],
+      legacy: [
+        "They ensured the prosperity of the ancestral village."
+      ]
+    }
   },
 
   {
     id: 13,
-    period: "19th Century",
-    title: "The House of Keel Rai",
-    description:
-      "Keel Rai's sons Dhundhi Rai and Daman Singh led two influential branches. Their descendants became known for leadership, strength and social influence.",
+    period: "17th Century",
+    title: "The Line of Virahaj Rai",
+    summary:
+      "Virahaj Rai's descendants formed one of the family's major branches.",
+    details: {
+      genealogy: [
+        "Virahaj Rai had four sons.",
+        "Pukaar Rai",
+        "Gelhu",
+        "Melhu",
+        "Kewatu Rai"
+      ]
+    }
   },
 
   {
     id: 14,
-    period: "19th Century",
-    title: "Dhautal Singh's Wisdom",
-    description:
-      "Narayan Singh's son Dhautal Singh earned recognition for wisdom, foresight and sound judgment, becoming one of the most respected figures in the lineage.",
+    period: "17th Century",
+    title: "Pukari Baba",
+    summary:
+      "Pukaar Rai became widely remembered as Pukari Baba in local tradition.",
+    details: {
+      achievements: [
+        "Pukaar Rai became known as Pukari Baba."
+      ],
+      legacy: [
+        "His name continues to be remembered with reverence."
+      ],
+      notes: [
+        "Gelhu and Melhu left no descendants, causing their branches to end."
+      ]
+    }
   },
 
   {
     id: 15,
-    period: "19th Century",
-    title: "Valor of Jagatu Singh",
-    description:
-      "Jagatu Singh and his cousin Sannu Singh became celebrated in family tradition for bravery and military success.",
+    period: "17th–18th Century",
+    title: "Kewatu Rai's Expansion",
+    summary:
+      "Kewatu Rai's descendants spread far beyond their homeland into present-day West Bengal.",
+    details: {
+      settlements: [
+        "His descendants settled across twenty-four villages.",
+        "The settlements lie in the Rangapur region of Ghodaghat, District Nadia, West Bengal."
+      ],
+      legacy: [
+        "This branch demonstrates the remarkable geographical expansion of the family."
+      ]
+    }
   },
 
   {
     id: 16,
-    period: "Late 19th Century",
-    title: "Continuation Through Vishveshwar Singh",
-    description:
-      "Among Jagatu Singh's sons, only Vishveshwar Singh carried the direct lineage forward through his son Tulsi Singh.",
+    period: "17th Century",
+    title: "The Line of Bhuj Rai",
+    summary:
+      "Bhuj Rai's six sons established several influential branches across the region.",
+    details: {
+      genealogy: [
+        "Bhuj Rai had six sons.",
+        "Keel Rai remained in Deorai.",
+        "Varmal Rai established Varmalpur.",
+        "Kuber Rai settled in Varmalpur.",
+        "Keval Rai (Kole Rai) became the ancestor of several important branches."
+      ],
+      settlements: [
+        "Varmalpur derived its name from Varmal Rai."
+      ]
+    }
   },
 
   {
     id: 17,
-    period: "Early 20th Century",
-    title: "Tulsi Singh's Generation",
-    description:
-      "Tulsi Singh had three sons—Ram Niranjan, Gurucharan (Bhagwati Charan Singh), and Bhagwatideen Singh. The main lineage continued through Ram Niranjan.",
+    period: "17th Century",
+    title: "The Three Houses of Keval Rai",
+    summary:
+      "Keval Rai's three marriages gave rise to several important branches of the family.",
+    details: {
+      genealogy: [
+        "Keval Rai had three wives."
+      ],
+      settlements: [
+        "Kam Singh's descendants settled in Jamuwan and Madhi.",
+        "Kharag Rai's descendants settled in Dobhi Khas.",
+        "Harav Rai's descendants settled in Dhanrakha.",
+        "Narsingh Das continued the principal lineage through the third wife."
+      ],
+      legacy: [
+        "These branches became some of the most influential descendants of Bhuj Rai."
+      ]
+    }
   },
 
   {
     id: 18,
-    period: "Indian Freedom Movement",
-    title: "Kashinath Singh",
-    description:
-      "Kashinath Singh, son of Ram Niranjan, became a scholar, Gandhian and freedom fighter. He actively participated in India's independence movement despite family opposition.",
+    period: "18th Century",
+    title: "The Rise of Narsingh Das",
+    summary:
+      "Narsingh Das became the ancestor of two significant family branches through Harihar Singh and Malchand Rai.",
+    details: {
+      genealogy: [
+        "Narsingh Das had two sons:",
+        "Harihar Singh",
+        "Malchand Rai"
+      ],
+      legacy: [
+        "Their descendants expanded the Raghuvanshi lineage into numerous villages across the region."
+      ]
+    }
+  },
+  {
+    id: 19,
+    period: "18th Century",
+    title: "Harihar Singh – Strength and Spiritual Legacy",
+    summary:
+      "Harihar Singh became renowned for extraordinary physical strength, deep spirituality, and his lasting religious legacy.",
+    details: {
+      introduction:
+        "Harihar Singh, the elder son of Narsingh Das, was remembered equally for his immense physical strength and his devotion to spiritual life.",
+      achievements: [
+        "The village of Hariharpur is believed to be named after him.",
+        "According to oral tradition, he single-handedly lifted a massive stone slab (oat) that even today would require around ten strong men to move.",
+        "He carried the stone to the riverbank where he performed his daily bathing rituals."
+      ],
+      legacy: [
+        "Later in life he renounced worldly affairs and embraced asceticism.",
+        "He is believed to have donated his village to Baba Keenaram, the revered saint of the Aghor tradition.",
+        "The monastic establishment known as Ramshala still stands as a reminder of this spiritual heritage.",
+        "His descendants are settled in Thunhi village."
+      ]
+    }
   },
 
   {
-    id: 19,
+    id: 20,
+    period: "18th Century",
+    title: "The House of Malchand Rai",
+    summary:
+      "Malchand Rai continued the lineage through his sons Sheeldas and Ganesh Rai.",
+    details: {
+      genealogy: [
+        "Malchand Rai had two sons:",
+        "Sheeldas",
+        "Ganesh Rai"
+      ],
+      settlements: [
+        "Sheeldas settled in Kashidaspur."
+      ],
+      legacy: [
+        "Ganesh Rai became the ancestor of two important branches through Ishwardas and Ramdev."
+      ]
+    }
+  },
+
+  {
+    id: 21,
+    period: "18th Century",
+    title: "Ganesh Rai's Sons",
+    summary:
+      "Ganesh Rai's sons, Ishwardas and Ramdev, became founders of two major family branches.",
+    details: {
+      genealogy: [
+        "Ganesh Rai had two sons:",
+        "Ishwardas",
+        "Ramdev"
+      ],
+      legacy: [
+        "Their descendants eventually spread across dozens of villages."
+      ]
+    }
+  },
+
+  {
+    id: 22,
+    period: "18th Century",
+    title: "The Line of Ishwardas",
+    summary:
+      "Ishwardas's four sons established influential settlements across numerous villages.",
+    details: {
+      genealogy: [
+        "Ishwardas had four sons:",
+        "Rai Singh",
+        "Roop Singh",
+        "Todarmal",
+        "Madhoraam"
+      ],
+      settlements: [
+        "Rai Singh's descendants settled in Amuaar, Kusumhi and Amarauna.",
+        "Roop Singh's descendants spread to Narayanpur, Chakara, Kusarna, Gosauli, Murkha, Jamunibari, Kakarmaar, Dumva, Habusahi, Bhulandeah and neighboring villages.",
+        "Todarmal's descendants settled in Leverua, Mannupur and nearby settlements.",
+        "Madhoraam's descendants settled in Koilaari, Mannupur, Senapur, Loka Patti and surrounding villages."
+      ],
+      legacy: [
+        "The descendants of Ishwardas became one of the most geographically widespread branches of the family."
+      ]
+    }
+  },
+
+  {
+    id: 23,
+    period: "18th Century",
+    title: "The Line of Ramdev",
+    summary:
+      "Ramdev's eight sons established branches across numerous villages throughout the region.",
+    details: {
+      genealogy: [
+        "Ramdev had eight sons:",
+        "Naahar Shah",
+        "Harman Shah",
+        "Valbhadra",
+        "Govind Rai",
+        "Shyam Dhan",
+        "Prithvimal",
+        "Dhaniram",
+        "Gosaidas"
+      ],
+      settlements: [
+        "Naahar Shah's descendants settled in Heerapur and Machhati.",
+        "Harman Shah's descendants settled in Jarasi and Haridaspur.",
+        "Valbhadra settled in Khujji.",
+        "Govind Rai settled in Bhadaai village.",
+        "Shyam Dhan's descendants settled in Vodsar, Kachhavan, Vardeaha, Marikpur, Vatkahi and Bantari.",
+        "Prithvimal settled in Chitko village.",
+        "Dhaniram settled in Ghordaur and Anekpur.",
+        "Gosaidas's descendants settled in Hisampur, Khujji and Satmesara."
+      ]
+    }
+  },
+
+  {
+    id: 24,
+    period: "18th Century",
+    title: "The Main House of Deorai",
+    summary:
+      "The principal ancestral line continued through Keel Rai, who remained in Deorai.",
+    details: {
+      introduction:
+        "Returning to the principal lineage of Deorai, Bhuj Rai's eldest son Keel Rai remained rooted in the ancestral village.",
+      genealogy: [
+        "Keel Rai had two sons:",
+        "Dhundhi Rai",
+        "Daman Singh"
+      ],
+      legacy: [
+        "These two sons established the principal surviving branches of the family."
+      ],
+      quote:
+        "\"Keel Rai ke sut bhaye dou, Dhundhi Rai Daman Singh dou.\""
+    }
+  },
+
+  {
+    id: 25,
+    period: "18th Century",
+    title: "The Branch of Daman Singh",
+    summary:
+      "Daman Singh's descendants became known for strength, leadership and regional influence.",
+    details: {
+      settlements: [
+        "Daman Singh's descendants settled in Parapati."
+      ],
+      genealogy: [
+        "Among his notable descendants were:",
+        "Sannu Singh",
+        "Shivshankar Singh"
+      ],
+      achievements: [
+        "Sannu Singh became celebrated for his extraordinary physical strength and bravery.",
+        "Shivshankar Singh exercised influence across the entire region."
+      ],
+      legacy: [
+        "Their branch flourished with both prestige and leadership."
+      ]
+    }
+  },
+
+  {
+    id: 26,
+    period: "18th Century",
+    title: "The Legacy of Shivshankar Singh",
+    summary:
+      "Shivshankar Singh's leadership earned him lasting respect in the family genealogy.",
+    details: {
+      achievements: [
+        "His leadership extended across the surrounding region.",
+        "His influence became so significant that the genealogy preserves verses in praise of his house."
+      ],
+      quote:
+        "\"The genealogy honors Shivshankar Singh as the one who illuminated and glorified the lineage of Keel Rai.\""
+    }
+  },
+
+  {
+    id: 27,
+    period: "18th Century",
+    title: "The House of Dhundhi Rai",
+    summary:
+      "Dhundhi Rai's three sons established branches in Deorai, Parapati and Adhiyaari.",
+    details: {
+      genealogy: [
+        "Dhundhi Rai had three sons:",
+        "Narayan Singh",
+        "Gurubaksh Singh",
+        "Shivbaksh Singh"
+      ],
+      settlements: [
+        "Narayan Singh remained in Deorai.",
+        "Gurubaksh Singh settled in Parapati.",
+        "Shivbaksh Singh settled in Adhiyaari, Goan."
+      ]
+    }
+  },
+
+  {
+    id: 28,
+    period: "18th Century",
+    title: "Dhautal Singh – Wisdom and Prudence",
+    summary:
+      "Narayan Singh's only son became renowned for exceptional wisdom and foresight.",
+    details: {
+      genealogy: [
+        "Narayan Singh had only one son: Dhautal Singh."
+      ],
+      achievements: [
+        "He became famous for his intellect.",
+        "He was respected for wise judgment.",
+        "His prudence and foresight became defining characteristics of his branch."
+      ],
+      quote:
+        "\"Narayan ke sut bhaye ek, the Dhautal jo param vivek.\""
+    }
+  },
+
+  {
+    id: 29,
+    period: "19th Century",
+    title: "The Valor of Jagatu Singh",
+    summary:
+      "Jagatu Singh became one of the family's greatest warriors and a symbol of courage.",
+    details: {
+      genealogy: [
+        "Dhautal Singh had two sons:",
+        "Jagatu Singh",
+        "Bhagatu Singh"
+      ],
+      achievements: [
+        "Bhagatu Singh left no descendants.",
+        "Jagatu Singh became renowned as a formidable warrior.",
+        "Together with his cousin Sannu Singh, he became the subject of many stories of bravery remembered by the elders of Deorai."
+      ],
+      legacy: [
+        "Their partnership represented unity and courage within the family."
+      ],
+      quote:
+        "\"The genealogy celebrates the victories of Sannu Singh and Jagatu Singh in battle.\""
+    }
+  },
+
+  {
+    id: 30,
+    period: "19th Century",
+    title: "The House of Vishveshwar Singh",
+    summary:
+      "Among Jagatu Singh's sons, only Vishveshwar Singh continued the direct lineage.",
+    details: {
+      genealogy: [
+        "Jagatu Singh married in Allopur.",
+        "He had three sons:",
+        "Vishveshwar Singh",
+        "Lal Bahadur Singh",
+        "Mangalu Singh"
+      ],
+      achievements: [
+        "Vishveshwar Singh married in Amraut.",
+        "Lal Bahadur Singh married Mukta Devi of Birampur.",
+        "Mangalu Singh's wife was Lakhpati Devi."
+      ],
+      legacy: [
+        "Lal Bahadur Singh and Mangalu Singh left no descendants.",
+        "The direct family line continued only through Vishveshwar Singh."
+      ]
+    }
+  },
+
+  {
+    id: 31,
+    period: "Late 19th Century",
+    title: "Tulsi Singh's Generation",
+    summary:
+      "Tulsi Singh became the sole successor of Vishveshwar Singh and carried the lineage forward.",
+    details: {
+      genealogy: [
+        "Vishveshwar Singh had one son: Tulsi Singh.",
+        "Tulsi Singh had three sons:",
+        "Ram Niranjan",
+        "Bhagwati Charan Singh (Gurucharan)",
+        "Bhagwatideen Singh"
+      ],
+      legacy: [
+        "Bhagwatideen and Gurucharan left no descendants.",
+        "The principal lineage continued through Ram Niranjan."
+      ],
+      quote:
+        "\"Vishveshwar ke sut Tulsi, Tulsi ke sut teen...\""
+    }
+  },
+
+  {
+    id: 32,
+    period: "Indian Freedom Movement",
+    title: "Kashinath Singh – Scholar & Freedom Fighter",
+    summary:
+      "Kashinath Singh transformed the family's legacy from battlefield courage to the courage of India's freedom struggle.",
+    details: {
+      genealogy: [
+        "Ram Niranjan had one son: Kashinath Singh."
+      ],
+      achievements: [
+        "He was a respected scholar.",
+        "He was a devoted Gandhian.",
+        "He actively participated in India's freedom movement.",
+        "Despite opposition from his father and uncles, he chose the path of national service.",
+        "He was imprisoned several times because of his participation in the independence movement.",
+        "He remained unwavering in his ideals despite repeated hardships."
+      ],
+      legacy: [
+        "His life represented a new form of courage—moral and political bravery."
+      ]
+    }
+  },
+
+  {
+    id: 33,
+    period: "20th Century",
+    title: "Family Life of Kashinath Singh",
+    summary:
+      "Kashinath Singh's family carried the lineage into the modern era.",
+    details: {
+      achievements: [
+        "He married into the prestigious family of Kailawar.",
+        "His wife's name was Shyama Devi."
+      ],
+      genealogy: [
+        "They were blessed with three sons and three daughters."
+      ]
+    }
+  },
+
+  {
+    id: 34,
     period: "Modern Era",
     title: "The Next Generation",
-    description:
-      "Kashinath Singh and Shyama Devi were blessed with three sons: Dr. Rudra Pratap Singh, Raghvendra Pratap Singh and Jagdish Pratap Singh.",
+    summary:
+      "Kashinath Singh's three sons represent the continuation of the principal lineage.",
+    details: {
+      genealogy: [
+        "Dr. Rudra Pratap Singh",
+        "Raghvendra Pratap Singh",
+        "Jagdish Pratap Singh"
+      ],
+      legacy: [
+        "They continue the principal Raghuvanshi lineage established over four centuries earlier."
+      ]
+    }
   },
+
+  {
+    id: 35,
+    period: "Legacy",
+    title: "Four Centuries of Heritage",
+    summary:
+      "From Ayodhya to the present day, the family's journey reflects courage, leadership, scholarship and service.",
+    details: {
+      introduction:
+        "Beginning with the migration of Brahmadev and Nayandev in 1590, the family's history spans more than four centuries.",
+      legacy: [
+        "The lineage established villages, expanded into numerous regions, and preserved its ancestral identity across generations.",
+        "Its members became village leaders, warriors, scholars, saints, freedom fighters and respected community figures.",
+        "The story continues today through the descendants of Kashinath Singh and the many branches spread across India."
+      ]
+    }
+  }
+
 ];
 //Family tree
 
@@ -1462,5 +2025,28 @@ export const poems = [
 हिम्मत टूटी थी पस्त हौसले
 सर झुका हालात के आगे,
 मंजूर हुए सब फैसले !`
+  },
+  {
+    id:18,
+    title:`आजमाइशें बढ़ती रही`,
+    content:`आजमाइशें बढ़ती रही,
+मैं बटता रहा दामन दामन,
+मुश्किलें समंदर से गहरी
+ठोकरें शहर की - हर कदम !
+
+सादगी से, एक ताज़गी की,
+रौशनी सी जल गयी,
+आँखो से बख्शती ज़िंदगी,
+आयी रीतू, ऋत बदल गयी !!
+
+भोलेपन में बच्चो सी वो,
+पर सुलझाती हर उलझन,
+माली मेरी बगिया की वो,
+हैं दो फूल, परी - अरहन !!
+
+परे राग-द्वेष-ईर्ष्या से,
+संजोती रिश्तो के बंधन,
+ना एहसाह हो दूरी का अब,
+जुड़े हैं ऐसे अपने मन !!`
   }
 ];

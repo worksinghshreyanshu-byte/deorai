@@ -21,15 +21,15 @@ export default function SectionHeader({
     <div
       className={`${
         isCenter ? "text-center" : "text-left"
-      } mb-8 md:mb-10 ${className}`}
+      } mb-6 md:mb-10 ${className}`}
     >
       {eyebrow && (
-        <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-brand/70 sm:text-xs md:text-sm">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-brand/70 sm:text-xs md:text-sm">
           {eyebrow}
         </p>
       )}
-
-      <h2 className="mt-3 font-serif text-3xl leading-tight text-brand sm:mt-4 sm:text-4xl md:text-5xl lg:text-6xl">
+ 
+      <h2 className="mt-3 font-serif font-semibold text-3xl leading-tight text-brand sm:mt-4 sm:text-4xl md:text-5xl lg:text-6xl">
         {title}
       </h2>
 

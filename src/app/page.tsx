@@ -21,7 +21,7 @@ export default function Home() {
           title="The Heritage Lands"
           subtitle="Explore each parcel of our ancestral estate"
         />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-20 mx-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 lg:my-20 mx-auto">
           {lands.map((land) => (
             <LandCard key={land.id} land={land} />
           ))}

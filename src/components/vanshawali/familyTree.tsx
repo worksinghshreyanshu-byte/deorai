@@ -1,5 +1,9 @@
+"use client";
 import { familyData } from "@/utils/constants";
 import SectionHeader from "../general/sectionHeader";
+import { useState } from "react";
+import Image from "next/image";
+import { Modal } from "antd";
 
 interface FamilyNode {
   name: string;
@@ -12,9 +16,7 @@ interface FlatLineageItem {
   generation: number;
 }
 
-const buildFlatLineageMap = (
-  rootNodes: FamilyNode[]
-): FlatLineageItem[] => {
+const buildFlatLineageMap = (rootNodes: FamilyNode[]): FlatLineageItem[] => {
   const items: FlatLineageItem[] = [];
 
   const traverse = (
@@ -43,22 +45,30 @@ const buildFlatLineageMap = (
 export default function FamilyTreeUI() {
   const flatLineage = buildFlatLineageMap(familyData.rootGeneration);
 
-  const maxGen = Math.max(
-    ...flatLineage.map((item) => item.generation)
-  );
+  const maxGen = Math.max(...flatLineage.map((item) => item.generation));
 
   const generationsArray = Array.from(
     { length: maxGen },
     (_, index) => index + 1
   );
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-stone-50 p-4 sm:p-8">
-      <SectionHeader
-        eyebrow="वंशावली • Genealogy"
-        title="Raghuvanshi Vanshavali"
-        subtitle="Lineage Chart & Parent–Child Records of Deorai"
-      />
+      <div className="mx-auto mb-10 flex max-w-5xl flex-col items-center justify-between">
+        <SectionHeader
+          eyebrow="वंशावली • Genealogy"
+          title="Raghuvanshi Vanshavali"
+          subtitle="Lineage Chart & Parent–Child Records of Deorai"
+        />
+
+        <button
+          onClick={() => setOpen(true)}
+          className="bg-[#c2410c] transition-all duration-200 active:scale-95 cursor-pointer text-white px-5 py-2 rounded-md hover:bg-[#9a3412]"
+        >
+          View Complete Chart
+        </button>
+      </div>
 
       <div className="mx-auto flex max-w-5xl flex-col gap-8">
         {generationsArray.map((genNumber) => {
@@ -110,6 +120,31 @@ export default function FamilyTreeUI() {
           );
         })}
       </div>
+
+      <Modal
+        open={open}
+        onCancel={() => setOpen(false)}
+        footer={null}
+        width="95%"
+        centered
+        styles={{
+          body: {
+            padding: 0,
+            background: "#fafaf9",
+          },
+        }}
+      >
+        <div className="flex justify-center overflow-auto max-h-[85vh] bg-stone-50 p-6">
+          <Image
+            src="/images/genealogy-chart.jpg"
+            alt="Raghuvanshi Vanshavali"
+            width={2200}
+            height={3200}
+            className="h-auto w-full object-contain"
+            priority
+          />
+        </div>
+      </Modal>
     </div>
   );
 }

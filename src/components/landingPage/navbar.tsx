@@ -31,12 +31,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
         <Link href="/" className="block">
           <Image
-            src="/logo.png"
-            alt="Gram Virasat"
-            width={220}
-            height={70}
+            src="/finalLogo.png"
+            alt="Deorai"
+            width={200}
+            height={60}
             priority
-            className="h-auto w-[170px] sm:w-[190px] md:w-[180px]"
+            className="h-auto w-[150px] sm:w-[150px] md:w-[150px]"
           />
         </Link>
 

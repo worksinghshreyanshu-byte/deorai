@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function AuthorSection() {
   return (
-    <section className="pb-20 pt-10">
+    <section className="pb-20 lg:pt-10 pt-6">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
         <div className="border border-[#E0C9A6] rounded-xl bg-[#F8F1E8] overflow-hidden">
-          <div className="relative w-full h-[560px]">
+          <div className="relative w-full h-[400px] lg:h-[560px]">
             <Image
               src="https://res.cloudinary.com/oenn8x6i/image/upload/v1783863574/author_er0g3m.jpg"
               alt={authorDetails.portraitLabel}
@@ -22,7 +22,7 @@ export default function AuthorSection() {
             {authorDetails.title}
           </h2>
 
-          <p className="text-[#C49A6C] mt-2">{authorDetails.subtitle}</p>
+          <p className="text-[#C49A6C] mt-2 font-semibold">{authorDetails.subtitle}</p>
 
           <div className="flex items-center my-6">
             <div className="flex-1 h-px bg-[#E0C9A6]" />
@@ -30,7 +30,7 @@ export default function AuthorSection() {
             <div className="flex-1 h-px bg-[#E0C9A6]" />
           </div>
 
-          <div className="space-y-6 text-[#4A3A2C] leading-relaxed">
+          <div className="space-y-6 text-[#4A3A2C] leading-7">
             {authorDetails.paragraphs.map(
               (paragraph: string, index: number) => (
                 <p key={index}>{paragraph}</p>

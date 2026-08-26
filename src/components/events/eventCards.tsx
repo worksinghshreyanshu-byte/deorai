@@ -25,7 +25,7 @@ export default function EventsSection() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6 md:w-[60%] space-y-3">
+              <div className="lg:p-6 p-4 md:w-[60%] space-y-3">
                 <div className="flex gap-3 text-sm">
                   <span className="bg-[#F3E7D8] text-brand px-3 py-1 rounded-full">
                     {event.date}
@@ -35,11 +35,11 @@ export default function EventsSection() {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-serif text-[#3E2417]">
+                <h3 className="text-2xl font-semibold font-serif text-[#3E2417]">
                   {event.title}
                 </h3>
 
-                <p className="text-[#6B5B4D]">
+                <p className="text-[#6B5B4D] text-sm leading-6">
                   {event.description}
                 </p>
 

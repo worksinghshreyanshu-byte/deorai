@@ -12,7 +12,7 @@ export default function ContactPage() {
 
         <SectionHeader
           eyebrow="Get in Touch"
-          title="Contact Gram Virasat"
+          title="Contact Us"
           subtitle="For heritage documentation, collaborations, business enquiries, and preserving the legacy of Deorai."
         />
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
             <ContactCard
               name="Shreyanshu Singh"
               phone="+91 95063 10223"
-              email="work.singhshreyanshu@fmail.com"
+              email="work.singhshreyanshu@gmail.com"
             />
 
             <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
