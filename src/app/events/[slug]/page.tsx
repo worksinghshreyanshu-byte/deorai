@@ -28,9 +28,6 @@ export default async function Page({ params }: Props) {
             { label: event.title },
           ]}
         />
-
-        {/* Image */}
-
         <div className="rounded-[28px] border border-[#D7C3AC] bg-[#F8F1E8] ">
           <div className="relative h-96 overflow-hidden rounded-2xl">
             <Image
@@ -42,18 +39,12 @@ export default async function Page({ params }: Props) {
           </div>
         </div>
 
-        {/* Heading */}
-
         <div className="space-y-6">
-        <h1 className="font-serif text-5xl text-brand">
-  {event.title}
-</h1>
+          <h1 className="font-serif text-xl font-semibold lg:text-5xl text-brand">
+            {event.title}
+          </h1>
 
-<p className="italic text-[#8B6F59]">
-  {event.description}
-</p>
-
-          {/* Metadata */}
+          <p className="italic text-md text-[#8B6F59]">{event.description}</p>
 
           <div className="flex flex-wrap gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#D7C3AC] bg-[#F3E7D8] px-4 py-2 text-sm font-medium text-[#5E4634]">
@@ -73,35 +64,25 @@ export default async function Page({ params }: Props) {
           </div>
         </div>
 
-        {/* About */}
-
         {event.about && (
-          <section className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
-            <h2 className="font-serif text-3xl text-brand">
-              About the Event
-            </h2>
+          <section className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] lg:p-8 p-6">
+            <h2 className="font-serif text-xl font-semibold lg:text-3xl text-brand">About the Event</h2>
 
             <div className="my-5 h-px bg-[#E4D6C7]" />
 
-            <p className="leading-9 text-[#5E4634]">
-              {event.about}
-            </p>
+            <p className="lg:leading-9 leading-7 text-sm lg:text-md text-[#5E4634]">{event.about}</p>
           </section>
         )}
 
-        {/* Significance */}
-
         {event.significance && (
           <section className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
-            <h2 className="font-serif text-3xl text-brand">
+            <h2 className="font-serif text-xl font-semibold lg:text-3xl text-brand">
               Cultural Significance
             </h2>
 
             <div className="my-5 h-px bg-[#E4D6C7]" />
 
-            <p className="leading-9 text-[#5E4634]">
-              {event.significance}
-            </p>
+            <p className="lg:leading-9 leading-7 text-sm lg:text-md text-[#5E4634]">{event.significance}</p>
           </section>
         )}
 

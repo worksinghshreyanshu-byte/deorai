@@ -2,19 +2,13 @@ import Image from "next/image";
 import { worksSection } from "@/utils/constants";
 import { GiOpenBook } from "react-icons/gi";
 import Link from "next/link";
+import SectionHeader from "../general/sectionHeader";
 
 export default function PublishedWorksSection() {
   return (
-    <section className=" py-24 px-6">
+    <section className="py-16 lg:py-24 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-serif text-[#2E1F16]">
-          {worksSection.title}
-        </h2>
-
-        <p className="mt-2 text-[#8B6F4E] italic">
-          {worksSection.subtitle}
-        </p>
-
+        <SectionHeader title={worksSection.title} subtitle={worksSection.subtitle}/>
         <div className="grid md:grid-cols-3 gap-10 mt-16">
           {worksSection.works.map((work, index) => (
             <Link

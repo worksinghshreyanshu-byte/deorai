@@ -20,7 +20,7 @@ export default async function LandDetailsPage({ params }: PageProps) {
 
   return (
     <div className="bg-[#f5f1eb] min-h-screen">
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-16 lg:py-20">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -29,13 +29,13 @@ export default async function LandDetailsPage({ params }: PageProps) {
           ]}
         />
 
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6 lg:gap-8">
           <SectionHeader
             align="left"
             eyebrow="Village Lands"
             title={land.title}
             subtitle={land.description}
-            className="mb-4"
+            className=""
           />
           <div className="flex md:justify-end">
             <div className="inline-flex items-center gap-2 bg-[#efe4d8] text-brand px-3 py-1.5 rounded-xl shadow-sm border border-[#e2d6c8]">
@@ -43,7 +43,7 @@ export default async function LandDetailsPage({ params }: PageProps) {
             </div>
           </div>
         </div>
-        <div className="relative w-full h-[450px] mt-6 rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative w-full h-100 lg:h-112.5 mt-6 rounded-2xl overflow-hidden shadow-lg">
           <Image
             src={land.image}
             alt={land.title}
@@ -53,7 +53,7 @@ export default async function LandDetailsPage({ params }: PageProps) {
           />
         </div>
         <div className="max-w-6xl mx-auto my-10">
-          <h2 className="text-2xl font-serif text-[#5b2c0f] mb-6">
+          <h2 className="text-xl lg:text-2xl font-semibold font-serif text-[#5b2c0f] mb-6">
             The Story of This Land
           </h2>
 

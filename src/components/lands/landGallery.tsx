@@ -15,7 +15,7 @@ export default function LandGallery({ images, title }: Props) {
 
   return (
     <div className="mt-20">
-      <h3 className="text-2xl font-serif text-center text-[#5b2c0f] mb-10">
+      <h3 className="text-2xl font-serif font-semibold text-center text-[#5b2c0f] mb-10">
         Gallery
       </h3>
 

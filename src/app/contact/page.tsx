@@ -4,8 +4,8 @@ import { Mail, Phone, MapPinned, FileText } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#FCF8F3] py-16">
-      <div className="mx-auto max-w-7xl px-6">
+    <div className=" bg-[#FCF8F3] py-16 mx-auto  px-4">
+      <div className=" max-w-7xl mx-auto">
         <Breadcrumb
           items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
         />
@@ -29,21 +29,18 @@ export default function ContactPage() {
               phone="+91 95063 10223"
               email="work.singhshreyanshu@gmail.com"
             />
-
-            <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
+            <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-6 lg:p-8">
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
                   <Mail size={22} />
                 </div>
-
                 <div>
                   <p className="text-xs uppercase tracking-[0.25em] text-[#8B6F59]">
                     Business Enquiries
                   </p>
-
                   <a
                     href="mailto:devraigaon@gmail.com"
-                    className="mt-2 block text-lg font-medium text-[#5E4634] transition hover:text-brand"
+                    className="mt-2 block text-sm lg:text-lg font-medium text-[#5E4634] transition hover:text-brand"
                   >
                     devraigaon@gmail.com
                   </a>
@@ -52,7 +49,7 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-6">
-              <p className="leading-8 text-[#5E4634]">
+              <p className="lg:leading-8 leading-7 text-[#5E4634]">
                 For{" "}
                 <span className="font-semibold text-brand">investments</span>,{" "}
                 <span className="font-semibold text-brand">partnerships</span>,{" "}
@@ -71,14 +68,14 @@ export default function ContactPage() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSdO9PiZJ7XhmCwLc1wC1EQys5NhnWmcukSH9lsv6DkQI9XsDA/viewform?usp=publish-editor"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 rounded-3xl bg-brand px-8 py-5 text-lg font-medium text-white transition hover:opacity-90"
+              className="flex items-center justify-center gap-3 rounded-3xl bg-brand px-8 py-5 text-md lg:text-lg font-medium text-white transition hover:opacity-90"
             >
               <FileText size={22} />
               Business & Partnership Form
             </a>
           </div>
 
-          <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
+          <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] lg:p-8 p-6">
             <div className="mb-6">
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
@@ -90,7 +87,7 @@ export default function ContactPage() {
                     Location
                   </p>
 
-                  <h3 className="font-serif text-3xl text-brand">
+                  <h3 className="font-serif text-xl font-semibold lg:text-3xl text-brand">
                     Visit Deorai
                   </h3>
                 </div>
@@ -98,7 +95,7 @@ export default function ContactPage() {
 
               <div className="my-6 h-px bg-[#E4D6C7]" />
 
-              <p className="leading-8 text-[#5E4634]">
+              <p className="lg:leading-8 lg:text-md text-sm leading-7 text-[#5E4634]">
                 Located in the historic village of Deorai, this place reflects
                 generations of culture, tradition, and heritage. We welcome
                 researchers, visitors, and anyone interested in preserving the
@@ -133,17 +130,17 @@ interface ContactCardProps {
 
 function ContactCard({ name, phone, email }: ContactCardProps) {
   return (
-    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8">
-      <h3 className="font-serif text-3xl text-brand">{name}</h3>
+    <div className="rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-6 lg:p-8">
+      <h3 className="font-serif lg:text-3xl text-xl font-semibold text-brand">{name}</h3>
 
       <div className="my-6 h-px bg-[#E4D6C7]" />
 
       <div className="space-y-5">
         <a
           href={`tel:${phone.replace(/\s/g, "")}`}
-          className="flex items-center gap-4 text-[#5E4634] transition hover:text-brand"
+          className="flex items-center gap-4 text-[#5E4634] text-sm transition hover:text-brand"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
+          <div className="flex h-10 w-10 items-center justify-center text-sm rounded-full bg-[#F3E7D8] text-brand">
             <Phone size={18} />
           </div>
 
@@ -152,9 +149,9 @@ function ContactCard({ name, phone, email }: ContactCardProps) {
 
         <a
           href={`mailto:${email}`}
-          className="flex items-center gap-4 text-[#5E4634] transition hover:text-brand"
+          className="flex items-center gap-4 text-[#5E4634] text-sm transition hover:text-brand"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
+          <div className="flex h-10 w-10 items-center justify-center text-sm rounded-full bg-[#F3E7D8] text-brand">
             <Mail size={18} />
           </div>
 

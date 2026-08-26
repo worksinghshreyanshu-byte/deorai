@@ -55,7 +55,7 @@ export default function FamilyTreeUI() {
 
   return (
     <div className="min-h-screen bg-stone-50 p-4 sm:p-8">
-      <div className="mx-auto mb-10 flex max-w-5xl flex-col items-center justify-between">
+      <div className="mx-auto mb-10 flex max-w-5xl flex-col items-center py-16 justify-between">
         <SectionHeader
           eyebrow="वंशावली • Genealogy"
           title="Raghuvanshi Vanshavali"
@@ -136,7 +136,7 @@ export default function FamilyTreeUI() {
       >
         <div className="flex justify-center overflow-auto max-h-[85vh] bg-stone-50 p-6">
           <Image
-            src="/images/genealogy-chart.jpg"
+            src="/lineage.jpg"
             alt="Raghuvanshi Vanshavali"
             width={2200}
             height={3200}

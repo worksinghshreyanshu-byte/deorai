@@ -3,7 +3,7 @@ import { HeartHandshake } from "lucide-react";
 
 export default function MemorialSection() {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-16 lg:py-24">
       <div className="mx-auto max-w-4xl rounded-3xl border border-[#D7C3AC] bg-[#F8F1E8] p-8 md:p-14 text-center">
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#F3E7D8] text-brand">
           <HeartHandshake size={30} />
