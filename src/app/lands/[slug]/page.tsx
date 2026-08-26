@@ -4,13 +4,111 @@ import { lands } from "@/utils/constants";
 import Breadcrumb from "@/components/general/breadCrumb";
 import LandGallery from "@/components/lands/landGallery";
 import SectionHeader from "@/components/general/sectionHeader";
+import { Metadata } from "next";
 
 interface PageProps {
   params: {
     slug: string;
   };
 }
+const siteUrl = "https://deorai.netlify.app";
 
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const land = lands.find((l) => l.slug === slug);
+
+  if (!land) {
+    return {
+      title: "Land Not Found | Deorai",
+      description: "The requested heritage land could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const title = `${land.title} | Heritage Lands of Deorai`;
+
+  const description =
+    land.description ||
+    `Explore the history and story of ${land.title}, part of the ancestral heritage lands of Deorai.`;
+
+  return {
+    metadataBase: new URL(siteUrl),
+
+    title,
+
+    description,
+
+    keywords: [
+      land.title,
+      "Deorai",
+      "Deorai heritage",
+      "Deorai lands",
+      "Deorai ancestral land",
+      "Deorai heritage lands",
+      "Deorai village",
+      "Deorai history",
+      "Deorai ancestral estate",
+      "ancestral land",
+      "heritage land",
+      "Indian village heritage",
+      "Deorai village history",
+    ],
+
+    alternates: {
+      canonical: `${siteUrl}/lands/${land.slug}`,
+    },
+
+    openGraph: {
+      title,
+
+      description,
+
+      url: `${siteUrl}/lands/${land.slug}`,
+
+      siteName: "Deorai",
+
+      type: "website",
+
+      locale: "en_IN",
+
+      images: [
+        {
+          url: land.image,
+          width: 1200,
+          height: 630,
+          alt: `${land.title} - Heritage Lands of Deorai`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+
+      title,
+
+      description,
+
+      images: [land.image],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return lands.map((land) => ({
+    slug: land.slug,
+  }));
+}
 export default async function LandDetailsPage({ params }: PageProps) {
   const { slug } = await params;
 

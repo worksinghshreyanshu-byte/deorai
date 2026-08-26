@@ -1,6 +1,80 @@
 import Breadcrumb from "@/components/general/breadCrumb";
 import SectionHeader from "@/components/general/sectionHeader";
+import { FRONTEND_URL } from "@/utils/constants";
 import { Mail, Phone, MapPinned, FileText } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(FRONTEND_URL),
+
+  title: "Contact Deorai | Heritage, Business & Collaboration Enquiries",
+
+  description:
+    "Get in touch with Deorai for heritage documentation, collaborations, partnerships, investments, media enquiries, business opportunities, and preserving the legacy of Deorai village.",
+
+  keywords: [
+    "Contact Deorai",
+    "Deorai contact",
+    "Deorai village",
+    "Deorai heritage",
+    "Deorai business enquiries",
+    "Deorai partnerships",
+    "Deorai collaborations",
+    "Deorai media enquiries",
+    "Deorai heritage documentation",
+    "Deorai village contact",
+    "Deorai Uttar Pradesh",
+    "heritage collaboration",
+    "heritage documentation",
+    "business partnership Deorai",
+  ],
+
+  alternates: {
+    canonical: `${FRONTEND_URL}/contact`,
+  },
+
+  openGraph: {
+    title: "Contact Deorai | Heritage, Business & Collaboration Enquiries",
+
+    description:
+      "Contact Deorai for heritage documentation, collaborations, partnerships, investments, media enquiries, and initiatives dedicated to preserving the legacy of Deorai village.",
+
+    url: `${FRONTEND_URL}/contact`,
+
+    siteName: "Deorai",
+
+    type: "website",
+
+    locale: "en_IN",
+
+    images: [
+      {
+        url: "https://res.cloudinary.com/oenn8x6i/image/upload/v1783872182/authorBook_yy9qhc.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Deorai — Heritage, Business & Collaboration Enquiries",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Contact Deorai | Heritage, Business & Collaboration Enquiries",
+
+    description:
+      "Get in touch with Deorai for heritage documentation, collaborations, partnerships, investments, media enquiries, and preserving the legacy of Deorai village.",
+
+    images: [
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783872182/authorBook_yy9qhc.png",
+    ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -9,13 +83,11 @@ export default function ContactPage() {
         <Breadcrumb
           items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
         />
-
         <SectionHeader
           eyebrow="Get in Touch"
           title="Contact Us"
           subtitle="For heritage documentation, collaborations, business enquiries, and preserving the legacy of Deorai."
         />
-
         <div className="grid gap-10 lg:grid-cols-[430px_1fr]">
           <div className="space-y-8">
             <ContactCard
@@ -23,7 +95,6 @@ export default function ContactPage() {
               phone="+91 98337 00965"
               email="rahul_r_singh@hotmail.com"
             />
-
             <ContactCard
               name="Shreyanshu Singh"
               phone="+91 95063 10223"

@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/general/breadCrumb";
 import { events } from "@/utils/constants";
+import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FaCalendarCheck, FaClock } from "react-icons/fa";
@@ -10,7 +11,96 @@ interface Props {
     slug: string;
   }>;
 }
+const siteUrl = "https://deorai.netlify.app";
 
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { slug } = await params;
+
+  const event = events.find((e) => e.slug === slug);
+
+  if (!event) {
+    return {
+      title: "Event Not Found | Deorai",
+      description: "The requested Deorai event could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const title = `${event.title} | Deorai`;
+  const description =
+    event.description ||
+    `Learn more about ${event.title}, including its date, time, location, cultural significance, and traditions at Deorai.`;
+
+  return {
+    metadataBase: new URL(siteUrl),
+
+    title,
+
+    description,
+
+    keywords: [
+      event.title,
+      "Deorai",
+      "Deorai events",
+      "Deorai village",
+      "Deorai festivals",
+      "Deorai celebrations",
+      "Deorai culture",
+      "Deorai heritage",
+      "Deorai traditions",
+      "village events",
+      "village celebrations",
+      "Indian village culture",
+    ],
+
+    alternates: {
+      canonical: `${siteUrl}/events/${event.slug}`,
+    },
+
+    openGraph: {
+      title,
+
+      description,
+
+      url: `${siteUrl}/events/${event.slug}`,
+
+      siteName: "Deorai",
+
+      type: "article",
+
+      locale: "en_IN",
+
+      images: [
+        {
+          url: event.image,
+          width: 1200,
+          height: 630,
+          alt: `${event.title} - Deorai`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+
+      title,
+
+      description,
+
+      images: [event.image],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 export default async function Page({ params }: Props) {
   const { slug } = await params;
 

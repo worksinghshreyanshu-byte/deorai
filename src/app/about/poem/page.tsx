@@ -1,7 +1,77 @@
 import Breadcrumb from "@/components/general/breadCrumb";
 import SectionHeader from "@/components/general/sectionHeader";
-import { poems } from "@/utils/constants";
+import { FRONTEND_URL, poems } from "@/utils/constants";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  metadataBase: new URL(FRONTEND_URL),
 
+  title: "काव्य संग्रह | राहुल सिंह | Hindi Poems",
+
+  description:
+    "राहुल सिंह की चयनित हिंदी कविताओं का काव्य संग्रह। जीवन, समाज, संवेदना, रिश्तों और मानवीय अनुभवों से जुड़ी उनकी कविताएँ पढ़ें।",
+
+  keywords: [
+    "राहुल सिंह कविताएँ",
+    "राहुल सिंह कविता",
+    "Rahul Singh poems",
+    "Hindi poems",
+    "Hindi poetry",
+    "हिंदी कविता",
+    "हिंदी कविताएँ",
+    "काव्य संग्रह",
+    "कवि राहुल सिंह",
+    "राहुल सिंह कवि",
+    "थोड़े शब्द लगभग में",
+    "Hindi poet",
+    "Indian poetry",
+  ],
+
+  alternates: {
+    canonical: `${FRONTEND_URL}/about/poem`,
+  },
+
+  openGraph: {
+    title: "काव्य संग्रह | राहुल सिंह | Hindi Poems",
+
+    description:
+      "राहुल सिंह की चयनित हिंदी कविताओं का काव्य संग्रह। जीवन, समाज, संवेदना और मानवीय अनुभवों से जुड़ी उनकी कविताएँ पढ़ें।",
+
+    url: `${FRONTEND_URL}/about/poem`,
+
+    siteName: "Deorai",
+
+    type: "website",
+
+    locale: "hi_IN",
+
+    images: [
+      {
+        url: "https://res.cloudinary.com/oenn8x6i/image/upload/v1783872182/authorBook_yy9qhc.png",
+        width: 1200,
+        height: 630,
+        alt: "राहुल सिंह (घायल) — काव्य संग्रह",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "काव्य संग्रह | राहुल सिंह | Hindi Poems",
+
+    description:
+      "राहुल सिंह की चयनित हिंदी कविताएँ पढ़ें — जीवन, समाज, संवेदना और मानवीय अनुभवों से जुड़ा काव्य संग्रह।",
+
+    images: [
+      "https://res.cloudinary.com/oenn8x6i/image/upload/v1783872182/authorBook_yy9qhc.png",
+    ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 export default function PoemsPage() {
   return (
     <section className="min-h-screen bg-[#FCF8F3] py-16">
@@ -46,12 +116,7 @@ export default function PoemsPage() {
                 {poem.content}
               </div>
 
-              {/* <button
-                className="mt-8 rounded-full bg-brand px-5 py-2 text-sm text-white transition hover:opacity-90"
-                onClick={() => alert(poem.content)}
-              >
-                Read Full Poem
-              </button> */}
+             
             </div>
           ))}
         </div>

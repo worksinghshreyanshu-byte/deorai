@@ -1,5 +1,5 @@
 import { AuthorDetails } from "./interface";
-
+export const FRONTEND_URL= "https://deorai.netlify.app"
 export const menuLinks = [
   { label: "Regional Info", href: "/regional-info" },
   { label: "Events", href: "/events" },
