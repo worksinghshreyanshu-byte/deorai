@@ -61,7 +61,7 @@ export default function MobileSidebar({
         ))}
       </div>
       <Link href="/contact">
-            <button className="bg-[#c2410c] mt-4 transition-all duration-200 active:scale-95 cursor-pointer text-white px-5 py-2 rounded-md hover:bg-[#9a3412] ">
+            <button  onClick={onClose} className="bg-[#c2410c] mt-4 transition-all duration-200 active:scale-95 cursor-pointer text-white px-5 py-2 rounded-md hover:bg-[#9a3412] ">
               Contact Us
             </button>
           </Link>
